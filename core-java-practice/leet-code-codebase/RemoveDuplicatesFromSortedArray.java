@@ -1,4 +1,4 @@
-class Solution {
+class removeDuplicatesFromSortedArray {
     public int removeDuplicates(int[] nums) {
         int ans=1;
         for(int i=1;i<nums.length;i++){
@@ -7,6 +7,6 @@ class Solution {
                 ans++;
             }
         }
-        return an
+        return ans;
     }
 }

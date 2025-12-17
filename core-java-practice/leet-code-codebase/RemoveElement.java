@@ -1,4 +1,4 @@
-class Solution {
+class solution {
     public int removeElement(int[] nums, int val) {
         int ans=0;
         for(int i=0;i<nums.length;i++){
