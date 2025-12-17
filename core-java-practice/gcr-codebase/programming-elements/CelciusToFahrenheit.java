@@ -5,6 +5,6 @@ public class CelciusToFahrenheit {
         System.out.println("Enter the temperature in Celsius:");
         double celsius = scanner.nextDouble();  
         double fahrenheit = (celsius * 9/5) + 32;
-        System.out.println(celsius + "°C is equal to " + fahrenheit + "°F");
+        System.out.println("Temperature in Fahrenheit is " + fahrenheit + "°F");
     }
 }
