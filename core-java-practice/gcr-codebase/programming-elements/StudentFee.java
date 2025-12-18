@@ -1,4 +1,4 @@
-//
+// program to find the discounted amount and discounted price the student will pay
 public class StudentFee {
     public static void main(String[] args) {
         int fee = 125000;
