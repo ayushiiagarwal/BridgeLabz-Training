@@ -5,6 +5,6 @@ public class StudentFee {
         int discountPercent = 10;
         int discountAmount = (fee * discountPercent) / 100;
         int finalFee = fee - discountAmount;
-        System.out.println("The final fee after discount is: " + finalFee);
+        System.out.println("The discount amount is INR " + discountAmount + " and the final discounted fee is INR " + finalFee);
     }
 }
