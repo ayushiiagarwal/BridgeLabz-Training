@@ -1,4 +1,4 @@
-import java.util.*;
+import java.util.Scanner;
 public class AverageOfThreeNumbers {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -10,5 +10,7 @@ public class AverageOfThreeNumbers {
         int num3 = scanner.nextInt();
         double average = (num1 + num2 + num3) / 3.0;
         System.out.println("Average = " + average);
+
+        scanner.close();
     }
 }

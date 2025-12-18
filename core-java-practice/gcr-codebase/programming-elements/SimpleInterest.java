@@ -1,4 +1,4 @@
-import java.util.*;
+import java.util.Scanner;
 public class SimpleInterest {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -11,5 +11,7 @@ public class SimpleInterest {
 
         double simpleInterest = (principal * rate * time) / 100;
         System.out.println("Simple Interest is " + simpleInterest);
+
+        scanner.close();
     }
 }

@@ -1,4 +1,4 @@
-import java.util.*;
+import java.util.Scanner;
 public class CelciusToFahrenheit {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -6,5 +6,7 @@ public class CelciusToFahrenheit {
         double celsius = scanner.nextDouble();  
         double fahrenheit = (celsius * 9/5) + 32;
         System.out.println("Temperature in Fahrenheit is " + fahrenheit + "°F");
+
+        scanner.close();
     }
 }

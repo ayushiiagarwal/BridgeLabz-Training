@@ -1,4 +1,4 @@
-import java.util.*;
+import java.util.Scanner;
 public class PowerCalculation {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -11,5 +11,7 @@ public class PowerCalculation {
             result *= base;
         }
         System.out.println(base + " raised to the power of " + exponent + " is: " + result);
+
+        scanner.close();
     }
 }

@@ -1,4 +1,4 @@
-import java.util.*;
+import java.util.Scanner;
 public class PermimeterOfRectangle {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -8,5 +8,7 @@ public class PermimeterOfRectangle {
         int width = scanner.nextInt();
         int perimeter = 2 * (length + width);
         System.out.println("Perimeter of rectangle is: " + perimeter);
+
+        scanner.close();
     }
 }
