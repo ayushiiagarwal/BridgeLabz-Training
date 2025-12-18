@@ -1,5 +1,5 @@
 // calculate profit and loss in a number and percentage based on the cost price of INR 129 and 
-// the selling price of INR 191. (Use a single line statement to dislay multiline text and variables.)
+// the selling price of INR 191. 
 public class ProfitAndLoss {
     public static void main(String[] args) {
         double costPrice = 129.0;
