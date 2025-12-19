@@ -15,7 +15,6 @@ public class FirstIsSmallest {
 
         if(num1 < num2 && num1 < num3){
             System.out.println("Is the first number smallest? Yes");
-
         }
         else{
             System.out.println("Is the first number smallest? No");
