@@ -11,7 +11,6 @@ public class LeapYearLogical {
         } else {
             System.out.println("Enter the years after 1582 only.");
         }
-
         sc.close();
     }
 }
