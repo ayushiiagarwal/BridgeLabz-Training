@@ -28,6 +28,7 @@ public class LargestOfThree {
             System.out.println("Is the second number the largest? No");
             System.out.println("Is the third number the largest? Yes");
         }
+        
         sc.close();
     }
 }
