@@ -13,6 +13,7 @@ public class SumUntil0orNegative {
             total += input;
         }
         System.out.println("Total sum is: " + total);
+        
         sc.close();
     }
 }
