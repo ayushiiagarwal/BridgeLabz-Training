@@ -4,6 +4,7 @@ import java.util.*;
 public class BMI {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a number: ");
         int number = sc.nextInt();
 
         double[] weight = new double[number];
@@ -11,6 +12,7 @@ public class BMI {
         double[] bmi = new double[number];
         String[] status = new String[number];
 
+        System.out.println("Enter weight (in kg) and height (in meters): ");
         for (int i = 0; i < number; i++) {
             weight[i] = sc.nextDouble();
             height[i] = sc.nextDouble();
