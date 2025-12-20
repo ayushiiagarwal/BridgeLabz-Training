@@ -26,6 +26,7 @@ public class BMIFitnessTracker {
             System.out.println("Your BMI: " + bmi);
             System.out.println("You come under the Obese category");
         }
+        
         sc.close();
     }
 }
