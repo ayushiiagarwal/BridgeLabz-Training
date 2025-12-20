@@ -35,5 +35,7 @@ public class BMI2D {
             System.out.printf("Person %d: Height = %.2f m, Weight = %.2f kg, BMI = %.2f, Status = %s%num",
                     (i + 1), data[i][1], data[i][0], data[i][2], status[i]);
         }
+
+        sc.close();
     }
 }
