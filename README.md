@@ -22,7 +22,7 @@ The focus this week was setting up tools and getting comfortable with basics of 
 ### 📅 Day 1 (16-Dec-25) - Git and Github Setup
 - Installed and configured Git.
 - Successfully initialized the local repository, managed remote synchronization, and established a branch-based workflow.
-- Learned basic Git commands (```init, clone, add, commit, push, checkout```).
+- Learned basic Git commands (```init, add, commit, push, checkout```).
 
 ### 📅 Day 2 (17-Dec-25) - Basic Java Programs
 - Solved some very basic logic programs to understand syntax and structure.
