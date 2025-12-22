@@ -14,6 +14,7 @@ BridgeLabz-Training/
 │       └── arrays/
 │       └── strings/ 
 ├── leet-code-codebase/
+├── scenario-based/
 └── README.md
 ```
 
