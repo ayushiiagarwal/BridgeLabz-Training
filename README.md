@@ -58,5 +58,30 @@ The focus this week was setting up tools and getting comfortable with basics of 
     
 👉🏻 [All Questions](https://github.com/ayushiiagarwal/BridgeLabz-Training/tree/core-java-practice/core-java-practice/gcr-codebase/control-flow)
 
+### 📅 Day 5 (20-Dec-25) - Arrays in Java
+- Studied Java array concepts:
+  - Creating, accessing and modifying an array
+  - 1D Array, 2D Array
+
+- Solved Array based problems like
+  - Reverse the elements of an Array
+  - Store the factors of a number in an Array
+  - Store the digits of a number in an Array
+    
+👉🏻 [All Questions](https://github.com/ayushiiagarwal/BridgeLabz-Training/tree/core-java-practice/core-java-practice/gcr-codebase/arrays)
+
+### 📅 Day 6 (22-Dec-25) - Strings in Java
+- Studied Java String concepts:
+  - String Input
+  - String Arrays
+  - Java Exceptions
+
+- Solved String based problems like
+  - Compare two strings
+  - Create a Substring from a String
+  - Convert String to uppercase and lowecase
+    
+👉🏻 [All Questions](https://github.com/ayushiiagarwal/BridgeLabz-Training/tree/core-java-practice/core-java-practice/gcr-codebase/strings)
+
 ---
 Keep Learning!☕
