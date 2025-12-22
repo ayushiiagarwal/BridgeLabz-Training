@@ -28,7 +28,7 @@ public class SplitText{
 
     public static boolean compare(String[] str1, String[] str2) {
         if (str1.length != str2.length) return false;
-        
+
         for (int i = 0; i < str1.length; i++) {
             if (!str1[i].equals(str2[i])) return false;
         }
@@ -37,7 +37,7 @@ public class SplitText{
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter a string: ");
+        System.out.println("Enter text: ");
         String text = sc.nextLine();
 
         String[] custom = split(text);
