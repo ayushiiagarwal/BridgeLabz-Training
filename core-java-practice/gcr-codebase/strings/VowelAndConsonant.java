@@ -7,7 +7,7 @@ public class VowelAndConsonant {
             if ("aeiou".indexOf(ch) != -1) return "Vowel";
             else return "Consonant";
         }
-        return "Letters only!";
+        return "Not a Letter";
     }
 
     public static int[] countTypes(String text) {
