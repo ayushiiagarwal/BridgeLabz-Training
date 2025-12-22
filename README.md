@@ -11,6 +11,8 @@ BridgeLabz-Training/
 │   └── gcr-codebase/
 │       └── programming-elements/
 │       └── control-flow/ 
+│       └── arrays/ 
+│       └── strings/ 
 ├── leet-code-codebase/
 └── README.md
 ```
