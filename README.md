@@ -10,7 +10,9 @@ BridgeLabz-Training/
 ├── core-java-practice/
 │   └── gcr-codebase/
 │       └── programming-elements/
-│       └── control-flow/ 
+│       └── control-flow/
+│       └── arrays/
+│       └── strings/ 
 ├── leet-code-codebase/
 └── README.md
 ```
