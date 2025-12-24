@@ -19,7 +19,7 @@ public class SimpleInterest{
 
         double result = simpleInterest(principal, rate, time);
 
-        System.out.println("The Simple Interest is " + result + "for principal " + principal + ", Rate of interest " + rate + " and time " + time);
+        System.out.println("The Simple Interest is " + result + " for principal " + principal + ", Rate of interest " + rate + " and time " + time);
 
         sc.close();
     }
