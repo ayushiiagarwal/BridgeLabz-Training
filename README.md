@@ -32,6 +32,7 @@ The focus this week was setting up tools and getting comfortable with basics of 
 
 ### 📅 Day 2 (17-Dec-25) - Basic Java Programs
 - Solved some very basic logic programs to understand syntax and structure.
+
 - Some questions include:
   - Palindrome Number
   - Two Sum
@@ -44,7 +45,7 @@ The focus this week was setting up tools and getting comfortable with basics of 
   - Data types
   - Operators
 
-- Solved problems based on arithmetic tasks like
+- Solved problems based on arithmetic tasks:
   - Profit/Loss percentages Calculation
   - Temperature Conversion
   - Distance Conversion
@@ -57,7 +58,7 @@ The focus this week was setting up tools and getting comfortable with basics of 
   - ```switch``` statements
   - Loops (```for, while, do-while```)
 
-- Solved Control Flow based problems like
+- Solved Control Flow based problems:
   - Sum of ```n``` Natural Numbers
   - Factorial of a Number
   - Factors of a Number
@@ -69,14 +70,14 @@ The focus this week was setting up tools and getting comfortable with basics of 
   - Creating, accessing and modifying an array
   - 1D Array, 2D Array
 
-- Solved Array based problems like
+- Solved Array based problems:
   - Reverse the elements of an Array
   - Store the factors of a number in an Array
   - Store the digits of a number in an Array
     
 👉🏻 [All Questions](https://github.com/ayushiiagarwal/BridgeLabz-Training/tree/core-java-practice/core-java-practice/gcr-codebase/arrays)
 
-- Solved Scenario Based Questions
+- Solved Scenario Based Questions:
   - The Coffee Counter Chronicles
   - Maya's BMI Fitness Tracker
 
@@ -88,7 +89,7 @@ The focus this week was setting up tools and getting comfortable with basics of 
   - String Arrays
   - Java Exceptions
 
-- Solved String based problems like
+- Solved String based problems:
   - Compare two strings
   - Create a Substring from a String
   - Convert String to uppercase and lowecase
@@ -100,7 +101,7 @@ The focus this week was setting up tools and getting comfortable with basics of 
 
 👉🏻 [All Questions](https://github.com/ayushiiagarwal/BridgeLabz-Training/tree/core-java-practice/core-java-practice/gcr-codebase/strings)
 
-- Scenario-based Questions
+- Scenario-based Questions:
   - Election Booth Manager
   - Metro Smart Card Fare Deduction
     
@@ -114,7 +115,7 @@ The focus this week was setting up tools and getting comfortable with basics of 
   - Static Methods
   - Standard Library Methods
 
-- Solved Method based problems like
+- Solved Method based problems:
   - OTP Generator
   - Find the Quadratic roots
   - Sum of Natural Numbers Using recursion
@@ -138,14 +139,14 @@ The focus this week was setting up tools and getting comfortable with basics of 
   - String Manipulations (```length(), substring(), toUpperCase(), toLowerCase()```)
   - Standard Library Methods
 
-- Solved problems like
+- Solved problems include: 
   - Fibonacci Sequence Generator
   - GCD and LCM Calculator
   - Factorial Using Recursion
 
 👉🏻 [All Questions](https://github.com/ayushiiagarwal/BridgeLabz-Training/tree/core-java-practice/core-java-practice/gcr-codebase/builtin-functions)
 
-- Scenario Based Questions
+- Scenario Based Questions:
   - Bus Route Distance Tracker
   - Festival Lucky Draw
 
