@@ -10,12 +10,6 @@ class Course {
         this.fee = fee;
     }
 
-    Course(){
-        courseName = "B.Tech";
-        duration = 4;
-        fee = 100000.0;
-    }
-
     void updateInstituteName(String name){
         instituteName = name;
     }
@@ -27,8 +21,11 @@ class Course {
         System.out.println("Course Fee: " + fee);
     }
     public static void main(String[] args) {
-        Course course = new Course();
-        course.displayCourseDetails();
+        Course course1 = new Course("B.Tech", 4, 400000.0);
+        Course course2 = new Course("L.L.B", 5, 800000.0);
+
+        course1.displayCourseDetails();
+        course2.displayCourseDetails();
 
     }
 
