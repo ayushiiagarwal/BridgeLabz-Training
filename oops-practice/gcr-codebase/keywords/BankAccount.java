@@ -54,7 +54,7 @@ public class BankAccount{
             System.out.println("Withrawn: " + amount);
         }
         else
-            System.err.println("Insufficient balance");
+            System.err.println("Insufficient balance"); 
     }
 
     public static void main(String[] args) {
