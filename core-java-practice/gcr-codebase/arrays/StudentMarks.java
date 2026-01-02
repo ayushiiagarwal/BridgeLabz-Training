@@ -13,7 +13,7 @@ public class StudentMarks {
         char[] grades = new char[n];
 
         System.out.println("Enter marks for Physics, Chemistry and Maths: ");
-        for (int i = 0; i < n; ) {
+        for (int i = 0; i < n; i++) {
             physics[i] = sc.nextInt();
             chemistry[i] = sc.nextInt();
             math[i] = sc.nextInt();
