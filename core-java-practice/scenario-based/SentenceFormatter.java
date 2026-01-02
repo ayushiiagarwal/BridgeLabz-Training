@@ -37,7 +37,7 @@ public class SentenceFormatter{
         String input = sc.nextLine();
 
         String result = formattedParagraph(input);
-        System.out.println("Formatted Paragraph:" + result);
+        System.out.println("\nFormatted Paragraph:\n" + result);
 
         sc.close();
     }
