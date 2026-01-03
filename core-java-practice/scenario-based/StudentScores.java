@@ -48,11 +48,6 @@ public class StudentScores {
             marks[i] = sc.nextInt();
         }
 
-        for(int i=0;i<n;i++){
-            if(marks[i] < 0)
-                System.out.println("Invalid input!");
-        }
-
         double avg = averageMarks(marks);
         System.out.println("Average Scores: " + avg);
         highestAndLowest(marks);
