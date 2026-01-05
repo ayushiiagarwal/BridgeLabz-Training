@@ -14,6 +14,10 @@ abstract class Product{
         this.setPrice(price);
     }
 
+    public int getProductID(){
+        return productID;
+    }
+
     public String getName(){
         return name;
     }
@@ -83,7 +87,7 @@ public class ECommercePlatform {
                 tax = ((Taxable) p).calculateTax();
 
             double Price = p.getPrice() + tax - discount;
-            System.out.println("Product: " + p.getName() + " Price: " + Price);
+            System.out.println("Product Id: " + p.getProductID() + "\nProduct: " + p.getName() + "\nPrice: " + Price + "\n");
         }
     }
     public static void main(String[] args) {
