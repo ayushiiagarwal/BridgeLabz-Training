@@ -8,9 +8,9 @@ The content of this repository is organized into different branches based on the
 Navigate to the specific branches using the links below.
 
 
-- BridgeLabz-Training
-  - 📂 [core-java-practice](https://github.com/ayushiiagarwal/BridgeLabz-Training/tree/core-java-practice)
-  - 📂 [oops-practice](https://github.com/ayushiiagarwal/BridgeLabz-Training/tree/oops-practice)
+### BridgeLabz-Training
+- 📂 [core-java-practice](https://github.com/ayushiiagarwal/BridgeLabz-Training/tree/core-java-practice)
+- 📂 [oops-practice](https://github.com/ayushiiagarwal/BridgeLabz-Training/tree/oops-practice)
 
 
 ------
