@@ -161,6 +161,7 @@ The focus this week was setting up tools and getting comfortable with basics of 
   - Digital Watch Simulation
   - Employee Wage Computation Problem
   - Line Comparison Problem
+  - Snake & Ladder Problem
 
 👉🏻 [All Questions](https://github.com/ayushiiagarwal/BridgeLabz-Training/tree/core-java-practice/core-java-practice/scenario-based)
 
