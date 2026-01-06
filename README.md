@@ -10,7 +10,7 @@ Navigate to the specific branches using the links below.
 
 - BridgeLabz-Training
   - 📂 [core-java-practice](https://github.com/ayushiiagarwal/BridgeLabz-Training/tree/core-java-practice)
-  - 📂 [oops-practice]( [oops-practice](https://github.com/ayushiiagarwal/BridgeLabz-Training/tree/oops-practice))
+  - 📂 [oops-practice](https://github.com/ayushiiagarwal/BridgeLabz-Training/tree/oops-practice)
 
 
 ------
