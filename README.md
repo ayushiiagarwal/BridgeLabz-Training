@@ -126,5 +126,12 @@ The focus this week was setting up tools and getting comfortable with basics of 
 
 👉🏻 [Questions](https://github.com/ayushiiagarwal/BridgeLabz-Training/tree/oops-practice/oops-practice/scenario-based)
 
+### 📅 Day 17 (06-Jan-26) - Scenario-based Questions
+  - Scenario-based Questions: 
+    - Phone Contact Organizer
+    - Online Quiz Platform
+    - Student Report Generator
+    - Library Management System
+
 ---
 Keep Learning!☕
