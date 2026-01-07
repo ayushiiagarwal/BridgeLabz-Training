@@ -24,7 +24,7 @@ BridgeLabz-Training/
 # 🛠️ Week 2: Object-Oriented Programming
 The focus this week was setting up tools and getting comfortable with basics of Git, GitHub and Java Programs.
 
-### 📅 Day 1 (30-Dec-25) - Java Class and Objects
+### 📅 Day 11 (30-Dec-25) - Java Class and Objects
 Studied the concepts of:
 - Class
 - Object
@@ -39,7 +39,7 @@ Solved Problems:
 
 👉🏻 [All Questions](https://github.com/ayushiiagarwal/BridgeLabz-Training/tree/oops-practice/oops-practice/gcr-codebase/class-objects)
 
-### 📅 Day 2 (30-Dec-25) - Java Constructors, Instance Vs. Class Variables, Access Modifiers Concepts
+### 📅 Day 12 (30-Dec-25) - Java Constructors, Instance Vs. Class Variables, Access Modifiers Concepts
 Studied the concepts of:
 - Constructors
 - Instance vs. class Variables
@@ -51,7 +51,7 @@ Solved Problems:
 
 👉🏻 [All Questions](https://github.com/ayushiiagarwal/BridgeLabz-Training/tree/oops-practice/oops-practice/gcr-codebase/constructors-modifiers)
 
-### 📅 Day 3 (01-Jan-26) - Java Keywords 
+### 📅 Day 13 (01-Jan-26) - Java Keywords 
 Studied the concepts of:
 - ```this``` Keyword
 - ```static``` Keyword
@@ -70,7 +70,7 @@ Scenario-based Questions:
 
 👉🏻 [Questions](https://github.com/ayushiiagarwal/BridgeLabz-Training/tree/core-java-practice/core-java-practice/scenario-based)
 
-### 📅 Day 4 (02-Jan-26) - Object Modelling, Class Diagram
+### 📅 Day 14 (02-Jan-26) - Object Modelling, Class Diagram
 Studied the concepts of:
 - Class Diagram
 - Object Diagram
@@ -90,7 +90,7 @@ Scenario-based Questions:
 
 👉🏻 [Questions](https://github.com/ayushiiagarwal/BridgeLabz-Training/tree/core-java-practice/core-java-practice/scenario-based)
 
-### 📅 Day 5 (03-Jan-26) - Java Inheritance
+### 📅 Day 15 (03-Jan-26) - Java Inheritance
 Studied the concepts:
   - Types of Inheritance
   - Method Overriding
@@ -106,7 +106,7 @@ Scenario-based Questions
 
 👉🏻 [Questions](https://github.com/ayushiiagarwal/BridgeLabz-Training/tree/core-java-practice/core-java-practice/scenario-based)
 
-### 📅 Day 6 (05-Jan-26) - Pillars of OOPS
+### 📅 Day 16 (05-Jan-26) - Pillars of OOPS
 Studied the concepts:
   - Encapsulation
   - Polymorphism
