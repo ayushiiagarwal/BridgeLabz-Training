@@ -76,6 +76,26 @@ Navigate to the specific branches using the links below.
 
     - 📅 Day 17 (06-Jan-26) - [Scenario-based Questions](https://github.com/ayushiiagarwal/BridgeLabz-Training/tree/oops-practice/oops-practice/scenario-based)
 
+    - 📅 Day 18 (07-Jan-26) - [Scenario-based Questions](https://github.com/ayushiiagarwal/BridgeLabz-Training/tree/oops-practice/oops-practice/scenario-based)
+
+- 📂 [dsa-practice](https://github.com/ayushiiagarwal/BridgeLabz-Training/tree/dsa-practice)
+
+    ```
+        ├── dsa-practice/
+        │   └── gcr-codebase/
+        │       └── linked-list/
+        ├── leet-code-codebase/
+        ├── scenario-based/
+        └── README.md
+    ```
+
+    #### Week 3: Data Structures & Algorithms
+    - 📅 Day 18 (07-Jan-26) - [Data Structure Introduction and Linked List Concepts](https://docs.google.com/document/d/1JhK6OX-vxX8aUBYgm1qNGNAoYo4QSL5WQHwwLHysWOY/edit?usp=classroom_web&authuser=0)
+
+    - 📅 Day 19 (08-Jan-26) - [Linked List Practice Questions](https://github.com/ayushiiagarwal/BridgeLabz-Training/tree/dsa-practice/dsa-practice/gcr-codebase/linked-lists)
+
+    - 📅 Day 20 (09-Jan-26) - [Stack, Queue, HashMap and Hashing Fuction Concepts](https://docs.google.com/document/d/1T_E_hQpaegh0cKi5Z80OBNW5dQz-NNitTs2IWsv5TWs/edit?usp=classroom_web&authuser=0) and [Scenario-based Questions](https://github.com/ayushiiagarwal/BridgeLabz-Training/tree/oops-practice/oops-practice/scenario-based)
+
 
 ------
 
