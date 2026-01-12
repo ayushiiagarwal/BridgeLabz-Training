@@ -4,7 +4,7 @@ This README file documents the daily progress of tasks completed during the Brid
 
 ----
 ### 📂 Folder Structure
-The repository is organized by functional modules. Currently, all foundational logic resides within the ```oops-practice``` branch.
+
 ```
 BridgeLabz-Training/
 ├── oops-practice/
@@ -22,7 +22,6 @@ BridgeLabz-Training/
 
 ------
 # 🛠️ Week 2: Object-Oriented Programming
-The focus this week was setting up tools and getting comfortable with basics of Git, GitHub and Java Programs.
 
 ### 📅 Day 11 (30-Dec-25) - Java Class and Objects
   - Studied the concepts of:
