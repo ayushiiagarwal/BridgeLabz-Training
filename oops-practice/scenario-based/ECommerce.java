@@ -1,71 +1,61 @@
 import java.util.ArrayList;
 import java.util.List;
 
-class PaymentFailedException extends Exception{
-    public PaymentFailedException(String message){
+class PaymentFailedException extends Exception {
+    public PaymentFailedException(String message) {
         super(message);
     }
 }
 
-interface Payment{
-    void payment(double amount) throws PaymentFailedException;
+interface Payment {
+    void processPayment(double amount) throws PaymentFailedException;
 }
 
-class CardPayment implements Payment{
+class CardPayment implements Payment {
     @Override
-    public void payment(double amount) throws PaymentFailedException{
-        System.out.println("Card Payment of Rs." + amount + "...");
-        if(amount > 5000.0) throw new PaymentFailedException("Card Limit Exceeded");
-
-        System.out.println("Card Payment Successful\n");
+    public void processPayment(double amount) throws PaymentFailedException {
+        if (amount > 5000) throw new PaymentFailedException("Card limit exceeded.");
+        System.out.println("Paid $" + amount + " using Credit Card.");
     }
 }
 
-class UPIPayment implements Payment{
+class UPIPayment implements Payment {
     @Override
-    public void payment(double amount){
-        System.out.println("UPI Payment of Rs." + amount + "...");
-        System.out.println("UPI Payment Successful\n");
+    public void processPayment(double amount) {
+        System.out.println("Paid " + amount + " using UPI.");
     }
 }
 
-class WalletPayment implements Payment{
+class WalletPayment implements Payment {
+    private double balance = 10000.0; 
+
     @Override
-    public void payment(double amount){
-        System.out.println("Wallet Payment of Rs." + amount + "...");
-        System.out.println("Wallet Payment Successful\n");
+    public void processPayment(double amount) throws PaymentFailedException {
+        if (amount > balance) {
+            throw new PaymentFailedException("Insufficient Wallet Balance! Required: " + amount);
+        }
+        balance -= amount;
+        System.out.println("Paid $" + amount + " using Digital Wallet.");
     }
 }
 
-class Product{
-    private String productId, productName;
-    double price;
+class Product {
+    private String name;
+    private double price;
 
-    public Product(String productId, String productName, double price){
-        this.productId = productId;
-        this.productName = productName;
+    public Product(String name, double price) {
+        this.name = name;
         this.price = price;
     }
-
-    public String getProductId(){
-        return productId;
+    public String getName() { 
+        return name; 
     }
-
-    public String getProductName(){
-        return productName;
-    }
-
-    public double getPrice(){
-        return price;
-    }
-
-    public void getDetails(){
-        System.out.println("Product Name: " + getProductName());
-        System.out.println("Price: " + getPrice());
+    public double getPrice() { 
+        return price; 
     }
 }
 
-class Order{
+class Order {
     private String orderId;
     private Product product;
     private String status;
@@ -76,57 +66,64 @@ class Order{
         this.status = "PENDING";
     }
 
-    public void completeOrder() { 
-        this.status = "PLACED"; 
-    }
-
-    public void cancelOrder(){ 
-        this.status = "CANCELLED"; 
+    public void setStatus(String status) { 
+        this.status = status; 
     }
     
-    public void displayOrder() {
-        System.out.println("Order ID: " + orderId);
-        System.out.println("Product: " + product.getProductName());
-        System.out.println("Price: " + product.getPrice());
-        System.out.println("Status: " + status);
-        System.out.println();
+    @Override
+    public String toString() {
+        return "Order ID: " + orderId + "\nItem: " + product.getName() + "\nStatus: " + status;
     }
 }
 
-public class ECommerce{
-    public static void main(String[] args) {
-        Product laptop = new Product("P01", "MacBook Pro", 100000.0);
-        Product phone = new Product("P02", "iPhone 15", 80000.0);
+class Customer {
+    private String username;
+    private List<Order> myOrders;
+
+    public Customer(String username) {
+        this.username = username;
+        this.myOrders = new ArrayList<>();
+    }
+
+    public void placeOrder(String orderId, Product p, Payment method) {
+        Order newOrder = new Order(orderId, p);
+        System.out.println("\nCustomer " + username + " ordered " + p.getName());
         
-        List<Order> orderHistory = new ArrayList<>();
-
-        System.out.println("--- Ordered a Laptop ---");
-        laptop.getDetails();
-        System.out.println();
-        placeOrder("ORD101", laptop, new UPIPayment(), orderHistory);
-
-        System.out.println("\n--- Ordered a Phone ---");
-        phone.getDetails();
-        System.out.println();
-        placeOrder("ORD102", phone, new CardPayment(), orderHistory);
-
-        System.out.println("\n--- Order Tracking ---");
-        for (Order o : orderHistory) {
-            o.displayOrder();
+        try {
+            method.processPayment(p.getPrice());
+            newOrder.setStatus("PLACED");
+        } catch (PaymentFailedException e) {
+            newOrder.setStatus("CANCELLED");
+            System.out.println(e.getMessage());
+        } finally {
+            myOrders.add(newOrder);
         }
     }
 
-    public static void placeOrder(String id, Product p, Payment method, List<Order> history) {
-        Order newOrder = new Order(id, p);
-        try {
-            method.payment(p.getPrice());
-            newOrder.completeOrder();
-            System.out.println("Order Confirmed!");
-        } catch (PaymentFailedException e) {
-            newOrder.cancelOrder();
-            System.err.println("Order Failed: " + e.getMessage());
-        } finally {
-            history.add(newOrder);
+    public void viewOrderHistory() {
+        System.out.println("\n--- Order History for " + username + " ---");
+        for (Order o : myOrders){
+            System.out.println(o);
+            System.out.println();
         }
+    }
+}
+
+public class ECommerce {
+    public static void main(String[] args) {
+        
+        Product phone = new Product("iPhone", 80000.0);
+        Product book = new Product("To Hate Adam Connor", 4500.0);
+        Product laptop = new Product("MacBook Pro", 100000.0);
+
+        Customer user1 = new Customer("Lucy");
+
+        user1.placeOrder("ORD001", phone, new WalletPayment());
+
+        user1.placeOrder("ORD002", book, new UPIPayment());
+
+        user1.placeOrder("ORD003", laptop, new CardPayment());
+
+        user1.viewOrderHistory();
     }
 }
