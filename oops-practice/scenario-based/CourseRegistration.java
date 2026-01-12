@@ -14,12 +14,24 @@ class Person{
         this.name = name;
         this.id = id;
     }
+
+    public String getName(){
+        return name;
+    }
+
+    public String getId(){
+        return id;
+    }
+
+    public void getDetails(){
+        System.out.println("Stident ID: " + getId() + "\nStudent Name: " + getName());
+    }
 }
 
 class Student extends Person{
     private List<String> courses;
     private List<String> grades;
-    private static final int maxCourses = 3;
+    private static final int maxCourses = 4;
 
     public Student(String name, String id){
         super(name, id);
@@ -68,13 +80,14 @@ class Registration extends RegistrationService{
     @Override
     public void enroll(Student student, String courseName) throws CourseLimitExceededException{
         student.addCourse(courseName);
-        System.out.println("Registered for: " + courseName);
+        System.out.println(student.getName() + " registered for: " + courseName);
+        System.out.println();
     }
 
     @Override
     public void drop(Student student, String courseName){
         student.removeCourse(courseName);
-        System.out.println("Dropped Course: " + courseName);
+        System.out.println(student.getName() + " dropped Course: " + courseName);
     }
 
     @Override
@@ -87,25 +100,34 @@ class Registration extends RegistrationService{
 
 public class CourseRegistration {
     public static void main(String[] args) {
-        Student student = new Student("Ayushi", "A101");
+        Student student1 = new Student("Ayushi", "A101");
+        Student student2 = new Student("Alankrati", "A102");
         RegistrationService service = new Registration();
 
         try{
-            service.enroll(student, "Data Science");
-            service.enroll(student, "BBA");
-            service.enroll(student, "MBA");
-            service.enroll(student, "B.Tech");
+            service.enroll(student1, "Data Science");
+            service.enroll(student2, "BBA");
+            service.enroll(student1, "MBA");
+            service.enroll(student2, "B.Tech");
         }
         catch(CourseLimitExceededException e){
             System.out.println(e.getMessage());
         }
 
-        service.assignGrade(student, "Data Science", "A+");
-        service.assignGrade(student, "MBA", "B");
+        service.assignGrade(student1, "Data Science", "A+");
+        service.assignGrade(student2, "MBA", "B");
 
         System.out.println("\nCourses and Grades");
-        for(int i=0;i<student.getCourses().size();i++){
-            System.out.println(student.getCourses().get(i) + ": " + student.getGrades().get(i));
+
+        student1.getDetails();
+        for(int i=0;i<student1.getCourses().size();i++){
+            System.out.println(student1.getCourses().get(i) + ": " + student1.getGrades().get(i));
+        }
+        System.out.println();
+
+        student2.getDetails();
+        for(int i=0;i<student2.getCourses().size();i++){
+            System.out.println(student2.getCourses().get(i) + ": " + student2.getGrades().get(i));
         }
     }
 }
