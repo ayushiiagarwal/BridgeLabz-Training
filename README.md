@@ -133,5 +133,10 @@ The focus this week was setting up tools and getting comfortable with basics of 
     - Student Report Generator
     - Library Management System
 
+### 📅 Day 18 (07-Jan-26) - Scenario-based Questions
+  - Scenario-based Questions: 
+    - Cab Booking/Ride Management System
+    - Online Booking System
+
 ---
 Keep Learning!☕
