@@ -1,3 +1,5 @@
+// Merge Sort
+
 import java.util.Arrays;
 
 public class BookPrices {
