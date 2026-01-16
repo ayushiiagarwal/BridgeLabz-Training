@@ -4,12 +4,12 @@ import java.util.Arrays;
 
 public class BookPrices {
 
-    public static void sort(int[] prices, int left, int right){
+    public static void mergerSort(int[] prices, int left, int right){
         if(left < right){
             int mid = left + (right - left) / 2;
 
-            sort(prices, left, mid);
-            sort(prices, mid + 1, right);
+            mergerSort(prices, left, mid);
+            mergerSort(prices, mid + 1, right);
             merge(prices, left, mid, right);
         }
     }
@@ -38,7 +38,7 @@ public class BookPrices {
         int[] prices = {500, 450, 350, 1000, 480};
 
         System.out.println("Initial Array: " + Arrays.toString(prices));
-        sort(prices, 0, prices.length-1);
+        mergerSort(prices, 0, prices.length-1);
         System.out.println("Sorted Array: " + Arrays.toString(prices));
     }
 }
