@@ -14,7 +14,7 @@ public class BookPrices {
         }
     }
 
-    public static void merge(int[] prices, int left, int mid, int right){
+    private static void merge(int[] prices, int left, int mid, int right){
         int n1 = mid - left + 1;
         int n2 = right - mid;
 
