@@ -17,13 +17,13 @@ public class FirstNegative {
         int n = sc.nextInt();
 
         int[] numbers = new int[n];
-        System.out.println("Enter the elements od the array: ");
+        System.out.println("Enter the elements of the array: ");
         for(int i=0;i<n;i++){
             numbers[i] = sc.nextInt();
         }
 
         sc.close();
-        
+
         int result = searchNumber(numbers);
         System.out.println("First Negative Number found at index: " + result);
     }
