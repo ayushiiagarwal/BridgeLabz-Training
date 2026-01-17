@@ -1,4 +1,5 @@
 // Linear Search - Search for a specific word in a list of Sentences
+
 import java.util.*;
 public class SearchWord{
 
