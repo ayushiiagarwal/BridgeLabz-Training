@@ -25,6 +25,6 @@ public class FirstNegative {
         sc.close();
 
         int result = searchNumber(numbers);
-        System.out.println("First Negative Number found at index: " + result);
+        System.out.println("First Negative Number Found at Index: " + result);
     }
 }
