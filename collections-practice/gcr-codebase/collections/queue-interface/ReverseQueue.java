@@ -12,7 +12,26 @@ public class ReverseQueue{
 
         System.out.println(queue);
 
-        sc.close();
+        // another way..
+        
+        // Queue<Integer> queue = new LinkedList<>();
+        // for(int i=0;i<n;i++)
+        //     queue.add(sc.nextInt());
 
+        // System.out.println("Input: " + queue);
+
+        // Stack<Integer> stack = new Stack<>();
+
+        // while(!queue.isEmpty()){
+        //     stack.push((queue.remove()));
+        // }
+
+        // while (!stack.isEmpty()) {
+        //     queue.add(stack.pop());
+        // }
+
+        // System.out.println("Output: " + queue);
+
+        sc.close();
     }
 }
