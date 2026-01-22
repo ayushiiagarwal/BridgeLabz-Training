@@ -5,7 +5,6 @@ This README file documents the daily progress of tasks completed during the Brid
 ----
 
 # 🛠️ Week 1: Core Java Programming
-The focus this week was setting up tools and getting comfortable with basics of Git, GitHub and Java Programs.
 
 ### 📂 Folder Structure
 
@@ -299,6 +298,8 @@ BridgeLabz-Training/
     - Student Report Generator
     - Library Management System
 
+👉🏻 [Questions](https://github.com/ayushiiagarwal/BridgeLabz-Training/tree/oops-practice/oops-practice/scenario-based)
+
 ----
 
 # 🛠️ Week 3: Data Structure and Algorithms
@@ -306,7 +307,14 @@ BridgeLabz-Training/
 ```
     ├── dsa-practice/
     │   └── gcr-codebase/
+    │       └── algorithm-analysis/
+    │       └── file-inputStream-reader/
+    │       └── hashMap-hashing-function/
+    │       └── linear-binary-search/
     │       └── linked-list/
+    │       └── sorting-algorithms/
+    │       └── stack-queues/
+    │       └── stringBuilder-stringBuffer/
     ├── leet-code-codebase/
     ├── scenario-based/
     └── README.md
@@ -325,6 +333,8 @@ BridgeLabz-Training/
     - Cab Booking/Ride Management System
     - Online Booking System
 
+👉🏻 [Questions](https://github.com/ayushiiagarwal/BridgeLabz-Training/tree/oops-practice/oops-practice/scenario-based)
+
 ### 📅 Day 19 (8-Jan-26) - Linked List Practice Problems
 - Solved Problems like: 
     - Student Record Management (Singly Linked List)
@@ -333,9 +343,23 @@ BridgeLabz-Training/
 
 👉🏻 [All Questions](https://github.com/ayushiiagarwal/BridgeLabz-Training/tree/dsa-practice/dsa-practice/gcr-codebase/linked-lists)
 
-### 📅 Day 20 (9-Jan-26) - Scenario Based Questions
+### 📅 Day 20 (9-Jan-26) - Stack, Queue, HashMap and Hashing Function
 
-- Solved Problems: 
+- Studied concepts of:
+    - Stack
+    - Queue
+    - HashMap and Hashing Function
+
+- Solved Problems including: 
+    - Implement Queue Using Stacks
+    - Sort a Stack
+    - Custom HashMap
+
+👉🏻 [All Questions of Stack and Queue](https://github.com/ayushiiagarwal/BridgeLabz-Training/tree/dsa-practice/dsa-practice/gcr-codebase/stacks-queues)
+
+👉🏻 [All Questions of HashMap and Hashing Function](https://github.com/ayushiiagarwal/BridgeLabz-Training/tree/dsa-practice/dsa-practice/gcr-codebase/hashMap-hashing-function)
+
+- Scenario-based Questions: 
     - Hospital Patient Management System
     - Vehicle Rental Application
     - Flight Booking System
@@ -343,6 +367,38 @@ BridgeLabz-Training/
 👉🏻 [Questions](https://github.com/ayushiiagarwal/BridgeLabz-Training/tree/oops-practice/oops-practice/scenario-based)
 
 
+### 📅 Day 21 (12-Jan-26) - Scenario Based Questions
+
+- Solved Problems including: 
+    - Online Banking System
+    - E-Commerce Order Management System
+    - Student Course Registration System
+
+👉🏻 [All Problems](https://github.com/ayushiiagarwal/BridgeLabz-Training/tree/oops-practice/oops-practice/scenario-based)
+
+### 📅 Day 22 and 23 (13-Jan-26 & 14-Jan-26) - Sorting Algorithms
+
+- Studied:
+    - Bubble Sort
+    - Insertion Sort
+    - Merge Sort
+    - Quick Sort
+
+- Solved Problems like:
+    - Sort Student Marks
+    - Sort Employee IDs
+
+👉🏻 [All Problems](https://github.com/ayushiiagarwal/BridgeLabz-Training/tree/dsa-practice/dsa-practice/gcr-codebase/sorting-algorithms)
+
+### 📅 Day 24 (15-Jan-26) - Searching Algorithms, StringBUilder, StringBuffer, FileReader, InputStreamReader
+
+- Studied:
+    - Linear Search
+    - Binary Search
+    - StringBuilder
+    - StringBuffer
+    - FileReader
+    - InputStreamReader 
 
 ---
 Keep Learning!☕
