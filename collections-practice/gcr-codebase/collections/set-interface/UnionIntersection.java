@@ -23,6 +23,8 @@ public class UnionIntersection {
         for(int i=0;i<n2;i++)
             set2.add(sc.nextInt());
 
+        sc.close();
+
         System.out.println("Set 1: " + set1);
         System.out.println("Set 2: " + set2);
 
