@@ -21,10 +21,8 @@ public class InsurancePolicy {
     public static void main(String[] args) {
         Map<Integer, Policy> hashMap = new HashMap<>();
 
-        
         Map<Integer, Policy> linkedMap = new LinkedHashMap<>();
 
-        
         TreeMap<LocalDate, Policy> treeMap = new TreeMap<>();
 
         Policy p1 = new Policy(101, "Adam", LocalDate.now().plusDays(10));
@@ -41,7 +39,6 @@ public class InsurancePolicy {
         treeMap.put(p2.expiryDate, p2);
         treeMap.put(p3.expiryDate, p3);
 
-        
         System.out.println(hashMap.get(101));
 
         System.out.println("--------------------------");
