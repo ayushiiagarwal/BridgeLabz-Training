@@ -1,6 +1,6 @@
 import java.util.*;
 
-class StackUsingQueue {
+class Implementation {
 
     Queue<Integer> queue1 = new LinkedList<>();
     Queue<Integer> queue2 = new LinkedList<>();
@@ -24,10 +24,10 @@ class StackUsingQueue {
     }
 }
 
-public class StackTest {
+public class StackUsingQueue {
     public static void main(String[] args) {
 
-        StackUsingQueue s = new StackUsingQueue();
+        Implementation s = new Implementation();
 
         s.push(1);
         s.push(2);
