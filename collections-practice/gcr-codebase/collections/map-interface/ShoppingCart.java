@@ -17,8 +17,7 @@ public class ShoppingCart {
             sorted.put(entry.getValue(), entry.getKey());
         }
 
-        System.out.println(products);
-        System.out.println(ordered);
-        System.out.println(sorted);
+        System.out.println("Input: " + products);
+        System.out.println("Output: " + sorted);
     }
 }
