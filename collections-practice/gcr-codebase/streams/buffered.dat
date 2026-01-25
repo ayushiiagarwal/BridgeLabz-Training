@@ -1,0 +1,15 @@
+File Handling - Read and Write a Text File
+📌 Problem Statement:
+Write a Java program that reads the contents of a text file and writes it into a new file. If the source file does not exist, display an appropriate message.
+Requirements:
+Use FileInputStream and FileOutputStream.
+Handle IOException properly.
+Ensure that the destination file is created if it does not exist.
+
+
+Problem Statement:
+Create a Java program that copies a large file (e.g., 100MB) from one location to another using Buffered Streams (BufferedInputStream and BufferedOutputStream). Compare the performance with normal file streams.
+Requirements:
+Read and write in chunks of 4 KB (4096 bytes).
+Use System.nanoTime() to measure execution time.
+Compare execution time with unbuffered streams.
