@@ -40,6 +40,7 @@ class ReaderThread extends Thread {
 
 public class PipedStream {
     public static void main(String[] args) throws IOException {
+        
         PipedInputStream is = new PipedInputStream();
         PipedOutputStream os = new PipedOutputStream(is);
 
