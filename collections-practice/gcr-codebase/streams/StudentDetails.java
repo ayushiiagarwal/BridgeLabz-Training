@@ -3,7 +3,7 @@ import java.io.*;
 public class StudentDetails {
     public static void main(String[] args) throws IOException {
 
-        DataOutputStream student = new DataOutputStream(new FileOutputStream("student.txt"));
+        DataOutputStream student = new DataOutputStream(new FileOutputStream("student.dat"));
         
         student.writeInt(101);
         student.writeUTF("Ayushi");
@@ -11,7 +11,7 @@ public class StudentDetails {
 
         student.close();
 
-        DataInputStream dis = new DataInputStream(new FileInputStream("student.txt"));
+        DataInputStream dis = new DataInputStream(new FileInputStream("student.dat"));
 
         System.out.println("Roll: " + dis.readInt());
         System.out.println("Name: " + dis.readUTF());
