@@ -2,31 +2,68 @@ import java.util.*;
 
 public class AddressBook {
 
-    private List<ContactPerson> contacts = new ArrayList<>();
+    private String name;
+    private List<Contact> contacts = new ArrayList<>();
 
-    public void addContact(ContactPerson contact) {
-        contacts.add(contact);
+    public AddressBook(String name) {
+        this.name = name;
     }
 
-    public ContactPerson findByName(String firstName) {
-        for (ContactPerson c : contacts) {
-            if (c.getFirstName().equalsIgnoreCase(firstName)) {
+    public boolean addContact(Contact contact) {
+        if(contacts.contains(contact)){
+            return false;
+        }
+
+        contacts.add(contact);
+        return true;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public List<Contact> getContacts() {
+        return contacts;
+    }
+
+    public Contact findContactByName(String firstname, String lastname){
+        for(Contact c : contacts){
+            if(c.getFirstName().equalsIgnoreCase(firstname) && c.getLastName().equalsIgnoreCase(lastname)){
                 return c;
-            }
+            } 
         }
         return null;
     }
 
-    public boolean deleteContact(String firstName) {
-        ContactPerson contact = findByName(firstName);
-        if (contact != null) {
-            contacts.remove(contact);
-            return true;
+    public void removeContact(String firstname, String lastname){
+        boolean b = false;
+        for(Contact c : contacts){
+            if(c.getFirstName().equalsIgnoreCase(firstname) && c.getLastName().equalsIgnoreCase(lastname)){
+                contacts.remove(c);
+                b = true;
+            } 
         }
-        return false;
+
+        if(b) System.out.println("Removed successfully!");
+        else System.out.println("Contact not found!");
     }
 
-    public List<ContactPerson> getAllContacts() {
-        return contacts;
+    public void sortContactsByName() {
+        Collections.sort(contacts);
+    }
+
+    public void sortByCity() {
+        Collections.sort(contacts,
+            Comparator.comparing(Contact::getCity, String.CASE_INSENSITIVE_ORDER));
+    }
+
+    public void sortByState() {
+        Collections.sort(contacts,
+            Comparator.comparing(Contact::getState, String.CASE_INSENSITIVE_ORDER));
+    }
+
+    public void sortByZip() {
+        Collections.sort(contacts,
+            Comparator.comparing(Contact::getZip));
     }
 }

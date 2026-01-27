@@ -1,90 +1,108 @@
 import java.util.Scanner;
 
-public class Main {
-    public static void main(String[] args) {
+public class Main{
+    private static Scanner sc = new Scanner(System.in);
+    public static void main(String[] args){
 
-        Scanner sc = new Scanner(System.in);
-        AddressBookService service = new AddressBookService();
+        System.out.println("--Welcome to Address Book Program--");
 
-        System.out.println("Welcome to Address Book");
+        boolean b = true;
 
-        System.out.print("Enter First Name: ");
-        String firstName = sc.nextLine();
+        AddressBookInterface  manager = new AddressBookManager();
 
-        System.out.print("Enter Last Name: ");
-        String lastName = sc.nextLine();
-
-        System.out.print("Enter Address: ");
-        String address = sc.nextLine();
-
-        System.out.print("Enter City: ");
-        String city = sc.nextLine();
-
-        System.out.print("Enter State: ");
-        String state = sc.nextLine();
-
-        System.out.print("Enter Zip Code: ");
-        String zipCode = sc.nextLine();
-
-        System.out.print("Enter Phone Number: ");
-        String phone = sc.nextLine();
-
-        System.out.print("Enter Email: ");
-        String email = sc.nextLine();
-
-        ContactPerson contact = new ContactPerson(firstName, lastName, address,
-                        city, state, zipCode, phone, email);
-
-        service.addContact(contact);
-
-        while (true) {
-            System.out.println("\nChoose an option:");
-            System.out.println("1. Edit Contact");
-            System.out.println("2. Delete Contact");
-            System.out.println("3. Exit");
-
+        while(b){
+            displayMenu();
             int choice = sc.nextInt();
-            sc.nextLine(); 
+            sc.nextLine();
 
-            if (choice == 1) {
+            switch (choice) {
+                // UC-1
+                case 1:
+                    Contact c = manager.createContact();
+                    System.out.println(c);
+                    System.out.println("Created Successfully!");
+                    break;
+                
+                // UC-2
+                case 2:
+                    Contact contact = manager.createContact();
+                    manager.addContact(contact);
+                    break;
 
-                System.out.print("Enter new First Name: ");
-                String newFirstName = sc.nextLine();
+                // UC-5
+                case 3:
+                    manager.addMultipleContacts();
+                    break;
+                
+                // UC-3
+                case 4:
+                    manager.editContact();
+                    break;
+                
+                // UC-4
+                case 5:
+                    manager.deleteContacts();
+                    break;
 
-                System.out.print("Enter new Last Name: ");
-                String newLastName = sc.nextLine();
+                // UC-8
+                case 6:
+                    manager.searchPersonByCityOrState();
+                    break;
 
-                System.out.print("Enter new Phone Number: ");
-                String newPhone = sc.nextLine();
+                // UC-9
+                case 7: 
+                    manager.viewPersonByCityOrState();
+                    break;
+                
+                // UC-10
+                case 8:
+                    manager.countPersonByCityOrState();
+                    break;
+                
+                // UC-11
+                case 9:
+                    manager.sortContacts();
+                    break;
 
-                System.out.print("Enter new Email: ");
-                String newEmail = sc.nextLine();
+                // UC-12
+                case 10:
+                    manager.sortContactsByCityStateOrZip();
+                    break;
+                
+                // UC-13
+                case 11:
+                    manager.writeAddressBookToFile();
+                    break;
+                
+                case 12:
+                    manager.readAddressBookFromFile();
+                    break;
 
-                service.editContact(firstName, newFirstName, newLastName,
-                        newPhone, newEmail);
+                case 13:
+                    b = false;
+                    break;
 
-                firstName = newFirstName;
-
-            } 
-            else if (choice == 2) {
-                System.out.println("Enter Name to Delete: ");
-                String name = sc.next();
-                service.deleteContact(name);
-                break; 
-
-            } 
-            else if (choice == 3) {
-                System.out.println("Everything Up-to-Date...");
-                break;
-
-            } 
-            else 
-                System.out.println("Invalid choice, try again");
+                default:
+                    break;
+            
+            }
         }
+    } 
 
-        System.out.println("\nFinal Contacts:");
-        service.showContacts();
-
-        sc.close();
+    private static void displayMenu(){
+        System.out.println("\nSelect a number: ");
+        System.out.println("1. Create Contact");
+        System.out.println("2. Add new Contact");
+        System.out.println("3. Add multiple Contacts");
+        System.out.println("4. Edit a Contact");
+        System.out.println("5. Delete a Contact");
+        System.out.println("6. Search a Person by city or state.");
+        System.out.println("7. View Persons by city or state.");
+        System.out.println("8. Count Persons by city or state.");
+        System.out.println("9. Sort Contacts Alphabetically by name.");
+        System.out.println("10. Sort Contacts by city/state/zip.");
+        System.out.println("11. Write addressbook to file.");
+        System.out.println("12. Read addressbook from file.");
+        System.out.println("13. Exit.");
     }
 }
