@@ -400,5 +400,133 @@ BridgeLabz-Training/
     - FileReader
     - InputStreamReader 
 
+- Solved Problems including: 
+   - Remove Duplicates from a String Using StringBuilder
+   - Read a File Line by Line Using FileReader
+   - Convert Byte Stream to Character Stream Using InputStreamReader
+
+👉🏻 [Searching Algorithms](https://github.com/ayushiiagarwal/BridgeLabz-Training/tree/dsa-practice/dsa-practice/gcr-codebase/linear-binary-search)
+
+👉🏻 [StringBuilder-StringBuffer](https://github.com/ayushiiagarwal/BridgeLabz-Training/tree/dsa-practice/dsa-practice/gcr-codebase/stringBuilder-stringBuffer)
+
+👉🏻 [FileReader-InputStreamReader](https://github.com/ayushiiagarwal/BridgeLabz-Training/tree/dsa-practice/dsa-practice/gcr-codebase/file-inputStream-reader)
+
+- Solved Scenario-based Problem:
+    - [Address Book Problem](https://github.com/ayushiiagarwal/BridgeLabz-Training/tree/oops-practice/oops-practice/gcr-codebase/address-book-system?authuser=0)
+
+### 📅 Day 25 (16-Jan-26) - Algorithm's Runtime Analysis & Big-O Notation
+
+- Studied Concepts of:
+  - Runtime Analysis
+  - Big-O Notation
+  - Time Complexity Analysis
+  - Space Complexity Analysis
+  - Best, Worst, and Average Case Complexities
+
+- Solved Problems like:
+  - Comparing Different Data Structures for Searching
+  - Recursive Vs Iterative Fibonacci Computation
+
+👉🏻 [All Problems](https://github.com/ayushiiagarwal/BridgeLabz-Training/tree/dsa-practice/dsa-practice/gcr-codebase/algorithm-analysis?authuser=0)
+
+### 📅 Day 26 (17-Jan-26) - Scenario-based Problems
+
+- Solved Problems including: 
+  - TrafficManager - Roundabout Vehicle Flow Story
+  - BookShelf - Library Organiz Story
+  - BrowserBuddy - Tab History Manager
+
+👉🏻 [Problems](https://github.com/ayushiiagarwal/BridgeLabz-Training/tree/dsa-practice/dsa-practice/scenario-based)
+
+### 📅 Day 27 (19-Jan-26) - Java Generics 
+
+- Studied Concepts of:
+  - Type Parameters
+  - Generic Classes
+  - Generic Methods
+  - Bound Type Parameters
+  - Wildcards
+
+- Solved Problems including: 
+  - Smart Warehouse Management System
+  - Dynamic Online Marketplace
+
+👉🏻 [All Problems](https://github.com/ayushiiagarwal/BridgeLabz-Training/tree/collections-practice/collections-practice/gcr-codebase/generics?authuser=0)
+
+- Solved Scenario-based Problems: 
+  - ExamProctor - Online Exam Review System
+  - ParcelTracker - Delivery Chain Management
+
+👉🏻 [Problems](https://github.com/ayushiiagarwal/BridgeLabz-Training/tree/dsa-practice/dsa-practice/scenario-based)
+
+  - Banking Account Hierarchy
+  - Employee Role Polymorphism
+
+👉🏻 [Problems](https://github.com/ayushiiagarwal/BridgeLabz-Training/tree/oops-practice/oops-practice/scenario-based)
+
+### 📅 Day 28 (20-Jan-26) - Java Collections
+
+- Studied Concepts of:
+  - Collections Frameworks
+  - List, Set, Map, and Queue Interface and Implementing Classes
+  - Comparison of Different Implementations
+
+- Solved Problems including:
+  - Reserve List
+  - Check if Two Sets are Equal
+  - Reverse a Queue
+  - Word Frequency Counter
+
+👉🏻 [All Problems](https://github.com/ayushiiagarwal/BridgeLabz-Training/tree/collections-practice/collections-practice/gcr-codebase/collections?authuser=0)
+
+- Solved Scenario-based Question
+  - [CinemaTime - Movie Schedule Manager](https://github.com/ayushiiagarwal/BridgeLabz-Training/tree/oops-practice/oops-practice/scenario-based?authuser=0)
+
+### 📅 Day 29 (21-Jan-26) - Java Exceptions
+
+- Studied Concepts of:
+  - Types of Exceptions
+  - Exception Handling
+  - Custom Exceptions
+  - Extending Exception Class
+  - Defining Constructors
+
+- Solved Problems including:
+  - Compile-time Exception
+  - Runtime Exception
+  - User-Defined Exception
+
+👉🏻 [All Problems](https://github.com/ayushiiagarwal/BridgeLabz-Training/tree/collections-practice/collections-practice/gcr-codebase/exceptions?authuser=0)
+
+- Solved Scenario-based Question
+  - EduResults - Rank Sheet Generator
+  - SmartCheckout - Supermarket Billing Queue
+
+👉🏻 [Problems](https://github.com/ayushiiagarwal/BridgeLabz-Training/tree/dsa-practice/dsa-practice/scenario-based)
+
+### 📅 Day 30 (22-Jan-26) - Java Streams
+
+- Studied Concepts of:
+  - Java I/O Streams
+  - Types of Streams
+
+- Solved Problems including:
+  - File Handling - Read and Write a Text File
+  - Buffered Streams - Efficient File Copy
+
+👉🏻 [All Problems](https://github.com/ayushiiagarwal/BridgeLabz-Training/tree/collections-practice/collections-practice/gcr-codebase/streams?authuser=0)
+
+### 📅 Day 31 (27-Jan-26) - Scenario-based Questions
+
+- Solved Problems: 
+  - [Lexical Twist](https://github.com/ayushiiagarwal/BridgeLabz-Training/blob/core-java-practice/core-java-practice/scenario-based/LexicalTwist.java?authuser=0)
+
+### 📅 Day 32 (28-Jan-26) - Scenario-based Questions
+
+- Solved Problems: 
+  - Flip Key Logical Problem
+  - Restaurant Table Reservation System
+  - File Backup Scheduler
+
 ---
 Keep Learning!☕
