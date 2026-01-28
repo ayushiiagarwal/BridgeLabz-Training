@@ -304,6 +304,8 @@ BridgeLabz-Training/
 
 # 🛠️ Week 3: Data Structure and Algorithms
 
+### 📂 Folder Structure
+
 ```
     ├── dsa-practice/
     │   └── gcr-codebase/
@@ -437,6 +439,23 @@ BridgeLabz-Training/
   - BrowserBuddy - Tab History Manager
 
 👉🏻 [Problems](https://github.com/ayushiiagarwal/BridgeLabz-Training/tree/dsa-practice/dsa-practice/scenario-based)
+
+
+# 🛠️ Week 4: Java Collections and Streams
+
+### 📂 Folder Structure
+
+```
+    ├── collections-practice/
+    │   └── gcr-codebase/
+    │       └── collections/
+    │       └── exceptions/
+    │       └── generics/
+    │       └── streams/
+    ├── leet-code-codebase/
+    ├── scenario-based/
+    └── README.md
+```
 
 ### 📅 Day 27 (19-Jan-26) - Java Generics 
 
