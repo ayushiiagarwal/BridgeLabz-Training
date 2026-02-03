@@ -16,13 +16,10 @@ class Employee{
 
 public class ObjectsToArray {
     public static void main(String[] args) {
-        List<Employee> employees = new ArrayList<>();
-        Employee emp1 = new Employee(1, "Adam","HR");
-        Employee emp2 = new Employee(2, "Liam", "Software Engineer");
-        Employee emp3 = new Employee(3, "Olive", "Marketing Intern");
-        employees.add(emp1);
-        employees.add(emp2);
-        employees.add(emp3);
+        List<Employee> employees = Arrays.asList(new Employee(1, "Adam","HR"),
+                                    new Employee(2, "Liam", "Software Engineer"),
+                                    new Employee(3, "Olive", "Marketing Intern")
+                                );
 
         JSONArray employeeArray = new JSONArray();
 
