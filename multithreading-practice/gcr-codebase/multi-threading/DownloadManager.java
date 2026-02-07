@@ -14,7 +14,7 @@ public class DownloadManager extends Thread{
             for(int i=0;i<=100;i++){
                 System.out.println(Thread.currentThread().getName() + 
                 ": Downloading " + fileName + ": " + i + "%");
-                Thread.sleep(200 + random.nextInt(300));
+                Thread.sleep(10 + random.nextInt(20));
             }
         }
         catch(InterruptedException e){
