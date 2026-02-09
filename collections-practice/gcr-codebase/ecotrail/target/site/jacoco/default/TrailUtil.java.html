@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>TrailUtil.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">ecotrail</a> &gt; <a href="index.source.html" class="el_package">default</a> &gt; <span class="el_source">TrailUtil.java</span></div><h1>TrailUtil.java</h1><pre class="source lang-java linenums">import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import java.util.stream.Collectors;
+
+<span class="fc" id="L9">public class TrailUtil {</span>
+
+<span class="fc" id="L11">    private List&lt;Trail&gt; trailList = new ArrayList&lt;&gt;();</span>
+
+    public List&lt;Trail&gt; getTrailList() {
+<span class="nc" id="L14">        return trailList;</span>
+    }
+
+    public void setTrailList(List&lt;Trail&gt; trailList) {
+<span class="nc" id="L18">        this.trailList = trailList;</span>
+<span class="nc" id="L19">    }</span>
+
+    // Requirement 1
+    public void addTrailRecord(Trail trail) {
+<span class="fc" id="L23">        trailList.add(trail);</span>
+<span class="fc" id="L24">    }</span>
+
+    // Requirement 2
+    public Trail getTrailById(String trailId) {
+<span class="fc bfc" id="L28" title="All 2 branches covered.">        for (Trail t : trailList) {</span>
+<span class="fc bfc" id="L29" title="All 2 branches covered.">            if (t.getTrailId().equalsIgnoreCase(trailId)) {</span>
+<span class="fc" id="L30">                return t;</span>
+            }
+<span class="fc" id="L32">        }</span>
+<span class="fc" id="L33">        return null;</span>
+    }
+
+    // Requirement 3
+    public Set&lt;Trail&gt; getMostHikedTrails() {
+<span class="fc" id="L38">        int max = trailList.stream()</span>
+<span class="fc" id="L39">                .mapToInt(Trail::getHikeCount)</span>
+<span class="fc" id="L40">                .max()</span>
+<span class="fc" id="L41">                .orElse(0);</span>
+
+<span class="fc" id="L43">        return trailList.stream()</span>
+<span class="fc bfc" id="L44" title="All 2 branches covered.">                .filter(t -&gt; t.getHikeCount() == max)</span>
+<span class="fc" id="L45">                .collect(Collectors.toSet());</span>
+    }
+
+    // Requirement 4
+    public Map&lt;String, Integer&gt; getHikeCountByRegion() {
+<span class="fc" id="L50">        return trailList.stream()</span>
+<span class="fc" id="L51">                .collect(Collectors.groupingBy(</span>
+                        Trail::getRegion,
+                        LinkedHashMap::new,
+<span class="fc" id="L54">                        Collectors.summingInt(Trail::getHikeCount)</span>
+                ));
+    }
+
+    // Requirement 5
+    public Map&lt;String, List&lt;Trail&gt;&gt; groupTrailsByDifficulty() {
+<span class="fc" id="L60">        return trailList.stream()</span>
+<span class="fc" id="L61">                .collect(Collectors.groupingBy(</span>
+                        Trail::getDifficulty,
+                        LinkedHashMap::new,
+<span class="fc" id="L64">                        Collectors.toList()</span>
+                ));
+    }
+
+    // Requirement 6
+    public boolean updateHikeCount(String trailId, int additionalHikes) {
+<span class="fc" id="L70">        Trail t = getTrailById(trailId);</span>
+<span class="fc bfc" id="L71" title="All 2 branches covered.">        if (t != null) {</span>
+<span class="fc" id="L72">            t.setHikeCount(t.getHikeCount() + additionalHikes);</span>
+<span class="fc" id="L73">            return true;</span>
+        }
+<span class="fc" id="L75">        return false;</span>
+    }
+
+    // Requirement 7
+    public List&lt;Trail&gt; filterTrails(String region, String difficulty) {
+<span class="fc" id="L80">        return trailList.stream()</span>
+<span class="fc bfc" id="L81" title="All 2 branches covered.">                .filter(t -&gt; t.getRegion().equalsIgnoreCase(region)</span>
+<span class="pc bpc" id="L82" title="1 of 2 branches missed.">                        &amp;&amp; t.getDifficulty().equalsIgnoreCase(difficulty))</span>
+<span class="fc" id="L83">                .collect(Collectors.toList());</span>
+    }
+
+    // Requirement 8
+    public Map&lt;String, List&lt;Trail&gt;&gt; getTopTrailsByRegion(int n) {
+<span class="fc" id="L88">        Map&lt;String, List&lt;Trail&gt;&gt; map = new LinkedHashMap&lt;&gt;();</span>
+
+<span class="fc" id="L90">        Map&lt;String, List&lt;Trail&gt;&gt; grouped =</span>
+<span class="fc" id="L91">                trailList.stream().collect(Collectors.groupingBy(Trail::getRegion));</span>
+
+<span class="fc bfc" id="L93" title="All 2 branches covered.">        for (String region : grouped.keySet()) {</span>
+<span class="fc" id="L94">            List&lt;Trail&gt; sorted = grouped.get(region).stream()</span>
+<span class="fc" id="L95">                    .sorted(Comparator.comparingInt(Trail::getHikeCount).reversed())</span>
+<span class="fc" id="L96">                    .limit(n)</span>
+<span class="fc" id="L97">                    .collect(Collectors.toList());</span>
+<span class="fc" id="L98">            map.put(region, sorted);</span>
+<span class="fc" id="L99">        }</span>
+
+<span class="fc" id="L101">        return map;</span>
+    }
+
+    // Requirement 9
+    public Map&lt;String, String&gt; getDifficultyStats() {
+<span class="fc" id="L106">        Map&lt;String, String&gt; result = new LinkedHashMap&lt;&gt;();</span>
+
+<span class="fc" id="L108">        Map&lt;String, List&lt;Trail&gt;&gt; grouped = groupTrailsByDifficulty();</span>
+
+<span class="fc bfc" id="L110" title="All 2 branches covered.">        for (String diff : grouped.keySet()) {</span>
+<span class="fc" id="L111">            List&lt;Trail&gt; list = grouped.get(diff);</span>
+<span class="fc" id="L112">            int count = list.size();</span>
+<span class="fc" id="L113">            int total = list.stream().mapToInt(Trail::getHikeCount).sum();</span>
+<span class="pc bpc" id="L114" title="1 of 2 branches missed.">            int avg = count == 0 ? 0 : total / count;</span>
+
+<span class="fc" id="L116">            result.put(diff, &quot;count=&quot; + count + &quot;, totalHikes=&quot; + total + &quot;, averageHikes=&quot; + avg);</span>
+<span class="fc" id="L117">        }</span>
+
+<span class="fc" id="L119">        return result;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

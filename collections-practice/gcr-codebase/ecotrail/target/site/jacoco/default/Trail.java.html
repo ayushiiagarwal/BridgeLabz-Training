@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Trail.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">ecotrail</a> &gt; <a href="index.source.html" class="el_package">default</a> &gt; <span class="el_source">Trail.java</span></div><h1>Trail.java</h1><pre class="source lang-java linenums">public class Trail {
+    private String trailId;
+    private String name;
+    private String region;
+    private String difficulty;
+    private int hikeCount;
+
+<span class="nc" id="L8">    public Trail() {}</span>
+
+<span class="fc" id="L10">    public Trail(String trailId, String name, String region, String difficulty, int hikeCount) {</span>
+<span class="fc" id="L11">        this.trailId = trailId;</span>
+<span class="fc" id="L12">        this.name = name;</span>
+<span class="fc" id="L13">        this.region = region;</span>
+<span class="fc" id="L14">        this.difficulty = difficulty;</span>
+<span class="fc" id="L15">        this.hikeCount = hikeCount;</span>
+<span class="fc" id="L16">    }</span>
+
+    public String getTrailId() {
+<span class="fc" id="L19">        return trailId;</span>
+    }
+
+    public void setTrailId(String trailId) {
+<span class="nc" id="L23">        this.trailId = trailId;</span>
+<span class="nc" id="L24">    }</span>
+
+    public String getName() {
+<span class="fc" id="L27">        return name;</span>
+    }
+
+    public String getRegion() {
+<span class="fc" id="L31">        return region;</span>
+    }
+
+    public String getDifficulty() {
+<span class="fc" id="L35">        return difficulty;</span>
+    }
+
+    public int getHikeCount() {
+<span class="fc" id="L39">        return hikeCount;</span>
+    }
+
+    public void setHikeCount(int hikeCount) {
+<span class="fc" id="L43">        this.hikeCount = hikeCount;</span>
+<span class="fc" id="L44">    }</span>
+
+    @Override
+    public String toString() {
+<span class="nc" id="L48">        return trailId + &quot; | &quot; + name + &quot; | &quot; + region + &quot; | &quot; + difficulty + &quot; | &quot; + hikeCount + &quot; hikes&quot;;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>
