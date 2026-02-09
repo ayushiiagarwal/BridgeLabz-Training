@@ -109,12 +109,12 @@ http://localhost:9000
 ## 📷 SonarQube Results
 
 ### 🧾 Quality Gate & Dashboard
-![Dashboard](screenshots/dashboard.png)
+![Dashboard](Screenshots/Dashboard.png)
 
 ---
 
 ### 📊 Code Coverage
-![Coverage](screenshots/codecoverage.png)
+![Coverage](Screenshots/CodeCoverage.png)
 
 ---
 
