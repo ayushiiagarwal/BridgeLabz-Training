@@ -540,12 +540,295 @@ BridgeLabz-Training/
 - Solved Problems: 
   - [Lexical Twist](https://github.com/ayushiiagarwal/BridgeLabz-Training/blob/core-java-practice/core-java-practice/scenario-based/LexicalTwist.java?authuser=0)
 
-### 📅 Day 32 (28-Jan-26) - Scenario-based Questions
+### 📅 Day 32 (28-Jan-26) - Regex & J-Unit
+- Studied Cencepts of:
+  - Regex: 
+    - Common Patterns
+    - Java Regex API
+    - Quantifiers
+    - Built-in Methods ```(find(), matches(), replaceAll())```
+
+  - J-Unit:
+    - J-Unit Annotations
+    - Writing Test Cases
+    - Structure of a Test Class
+    - Assertions
+
+- Regex Problems: 
+  - Validate a Username
+  - Extract All Email Addresses from a Text
+  - Replace Multiple Spaces with a Single Space
+
+👉🏻 [All Problems](https://docs.google.com/document/d/1ymx2vLvp_QtTLLiNLCvoWjtYbTpMoKjqTC6yGACrcHU/edit?usp=classroom_web&authuser=0)
+
+- J-Unit Problems: 
+  - Testing a Calculator Class
+  - Testing Banking Transactions
+  - Testing Parameterized Tests
+
+👉🏻 [All Problems](https://docs.google.com/document/d/1zp5LOGFidCSZ_E7vMwEL_Ud3IWi5zpDDXdjHZfFuNBU/edit?usp=classroom_web&authuser=0)
+
+
+- Solved Scenario-based Problems: 
+  - [Flip Key Logical Problem](https://github.com/ayushiiagarwal/BridgeLabz-Training/blob/core-java-practice/core-java-practice/scenario-based/FlipKeyLogicalProblem.java?authuser=0)
+  - [Restaurant Table Reservation System](https://github.com/ayushiiagarwal/BridgeLabz-Training/blob/dsa-practice/dsa-practice/scenario-based/RestaurantReservation.java)
+  - [File Backup Scheduler](https://github.com/ayushiiagarwal/BridgeLabz-Training/blob/dsa-practice/dsa-practice/scenario-based/FileBackupScheduler.java)
+
+
+### 📅 Day 33 (29-Jan-26) - Annotations and Reflections
+- Studied Cencepts of:
+  - Annotations: 
+    - Common Built-in Annotations
+    - Creating Custom Annotations
+    - Advanced Custom Annotations
+    - Real-World Use Cases
+    - Annotation Processing Tools
+
+  - Reflections:
+    - Understanding of Reflection
+    - Using Reflection in Java
+
+- Annotation Problems: 
+  - Use @Override correctly
+  - Supress Unchecked Warning
+  - Create and Use a Repeatable Annotation
+
+👉🏻 [All Problems](https://github.com/ayushiiagarwal/BridgeLabz-Training/tree/collections-practice/collections-practice/gcr-codebase/annotation?authuser=0)
+
+- Refelection Problems:
+  - Get Class Information
+  - Dynamic Method Invocation
+  - Create a Custom Object Mapper
+
+👉🏻 [All Problems](https://github.com/ayushiiagarwal/BridgeLabz-Training/tree/collections-practice/collections-practice/gcr-codebase/reflection?authuser=0)
+
+- Solved Scenario-based Problem:
+  - [Future Logistics](https://github.com/ayushiiagarwal/BridgeLabz-Training/tree/oops-practice/oops-practice/scenario-based/FutureLogistics?authuser=0)
+
+
+# 🛠️ Week 5: IO Programming
+
+### 📂 Folder Structure
+
+```
+    ├── io-practice/
+    │   └── gcr-codebase/
+    │       └── csv-handling/
+    │       └── json-handling/
+    ├── leet-code-codebase/
+    └── scenario-based/
+```
+
+
+### 📅 Day 34 (30-Jan-26) - CSV Data Handling
+- Studied the concepts of:
+  - Reading CSV Files
+  - Writing CSV Files
+  - Parsing CSV Files
+  - Data Validation
 
 - Solved Problems: 
-  - Flip Key Logical Problem
-  - Restaurant Table Reservation System
-  - File Backup Scheduler
+  - Read and Write a CSV File
+  - Filter Records from a CSV File
+  - Validate CSV Data Before Processing
+
+👉🏻 [All Problems](https://github.com/ayushiiagarwal/BridgeLabz-Training/tree/io-programming-practice/io-programming-practice/gcr-codebase/csv-handling?authuser=0)
+
+
+### 📅 Day 35 (31-Jan-26) - JSON Data Handling
+- Studied the concepts of:
+  - Reading JSON Files
+  - Writing JSON Files
+  - Parsing JSON Files
+  - JSON Schema Validation
+
+- Solved Problems: 
+  - Read a JSON file
+  - Create a JSON Object
+  - Covert a list of Java Objects into JSON Array
+
+👉🏻 [All Problems](https://github.com/ayushiiagarwal/BridgeLabz-Training/tree/io-programming-practice/io-programming-practice/gcr-codebase/json-handling?authuser=0)
+
+
+# 🛠️ Week 6: Java 8 and its Features
+
+### 📂 Folder Structure
+
+```
+    ├── java8-features-practice/
+    │   └── gcr-codebase/
+    │       └── lambda-expressions/
+    │       └── functional-interfaces/
+    │       └── stream-api/
+    │       └── collectors/
+    ├── leet-code-codebase/
+    └── scenario-based/
+```
+
+### 📅 Day 36 (2-Feb-26) - Lambda Expressions and Functional Interfaces
+- Studied the concepts of:
+  - Lambda Expressions
+    - Lambda Expression
+    - Method References
+
+- Solved Problems: 
+  - Smart Home Lighting Automation
+  - Hospital Patient ID Printing
+
+👉🏻 [All Problems](https://github.com/ayushiiagarwal/BridgeLabz-Training/tree/java8-features-practice/java8-features-practice/gcr-codebase/lambda-expressions?authuser=0)
+
+  - Functional Interfaces
+    - Defining functional interfaces
+    - Default and Static Methods in interfaces
+    - Marker Interfacces
+  
+- Solved Problems:
+  - Smart Device Control Interface
+  - Temperature Alert System
+  - Password Strenght Validator
+  - Payment Gateway
+
+👉🏻 [All Problems](https://github.com/ayushiiagarwal/BridgeLabz-Training/tree/java8-features-practice/java8-features-practice/gcr-codebase/functional-interfaces?authuser=0)
+
+
+- Solved Scenario-based Problems:
+  - [AeroVigil Problem](https://github.com/ayushiiagarwal/BridgeLabz-Training/tree/dsa-practice/dsa-practice/scenario-based/AeroVigil?authuser=0)
+  - [StreamBuzz](https://github.com/ayushiiagarwal/BridgeLabz-Training/tree/collections-practice/collections-practice/scenario-based/StreamBuzz?authuser=0)
+
+
+### 📅 Day 37 (3-Feb-26) - Stream API and Collectors
+- Studied the concepts of:
+  - Stream API
+    - Intermediate operations: ```(filter, map, flatMap, distinct, sorted, peek, limit, skip)```
+    - Terminal operations: ```(collect, forEach, reduce, count, anyMatch, allMatch, noneMatch)``` 
+    - Stateless vs stateful operations
+    - Ordered vs unordered streams
+    - Parallel streams
+    - ```forEach()``` — Iterable vs Stream
+
+- Solved Problems: 
+  - Filter Expiring Memberships
+  - Stock Price Logger
+
+👉🏻 [All Problems](https://github.com/ayushiiagarwal/BridgeLabz-Training/tree/java8-features-practice/java8-features-practice/gcr-codebase/stream-api?authuser=0)
+
+  - Collectors
+    - Roles: 
+      - Transform Data
+      - Aggregate Data
+      - Group Data
+      - Parition Data
+    - Capabilities - ```toList(), toSet(), toMap(), joining(), groupingBy(), partitioningBy(), summarizingBy()```
+
+- Solved Problems: 
+  - Student Result Grouping
+  - Library Book Statistics
+
+👉🏻 [All Problems](https://github.com/ayushiiagarwal/BridgeLabz-Training/tree/java8-features-practice/java8-features-practice/gcr-codebase/collectors?authuser=0)
+
+- Solved Scenario-based Problem:
+  - [Factory Robot Hazard Analyzer](https://github.com/ayushiiagarwal/BridgeLabz-Training/tree/dsa-practice/dsa-practice/scenario-based/FactoryRobot?authuser=0)
+
+
+### 📅 Day 38 (4-Feb-26) - Scenario Based Problems
+- Solved Problems:
+  - Food Delivery Order Routing System
+  - Online Classroom Attendance Tracker
+
+# 🛠️ Week 7: Solution Designing
+
+### 📂 Folder Structure
+
+```
+    ├── design-patterns-practice/
+    │   └── gcr-codebase/
+    │       └── design-patterns
+    ├── leet-code-codebase/
+    └── scenario-based/
+```
+
+### 📅 Day 39 (5-Feb-26) - Scenario Based Problems
+- Studied concepts of:
+  - Categories of patterns
+    - Singleton
+    - Factory
+    - Observer
+    - BUilder
+  - UML Designing
+
+- Solved Problems:
+  - [Smart University Library Management System](https://github.com/ayushiiagarwal/BridgeLabz-Training/tree/design-patterns-practice/design-patterns-practice/gcr-codebase/design-patterns/Library-Management-System?authuser=0)
+
+- Solved scenario-based problems:
+  - Employee Leave Management System
+  - Music Playlist Manager
+
+# 🛠️ Week 8: Multi-Threading in Java
+
+### 📂 Folder Structure
+
+```
+    ├── multithreading-practice/
+    │   └── gcr-codebase/
+    │       └── multi-threading
+    ├── leet-code-codebase/
+    └── scenario-based/
+```
+
+### 📅 Day 40 (6-Feb-26) - Multi-Threading in Java
+- Studied concepts of:
+  - Creating Threads Using Thread Class
+  - Creating Threads Using Runnable Interface
+  - Thread Class vs Runnable Interface
+  - Thread Life Cycle and States
+  - Thread Methods and Operations
+
+- Solved Problems: 
+  - Download Manager
+  - Restaurant Order Processing System
+  - Print Shop Job Scheduler
+
+👉🏻 [All Problems](https://github.com/ayushiiagarwal/BridgeLabz-Training/tree/multithreading-practice/multithreading-practice/gcr-codebase/multi-threading?authuser=0)
+
+
+# 🛠️ Week 9: JDBC & DBMS
+
+### 📂 Folder Structure
+
+```
+    ├── dbms-practice/
+    │   └── gcr-codebase/
+    │       └── health-clinic-app
+    ├── leet-code-codebase/
+    └── scenario-based/
+```
+
+### 📅 Day 41 (7-Feb-26) - JDBC & DBMS
+- Studied concepts of:
+  - Established Database Connection
+  - CRUD Operations
+  - PreparedStatement vs Statement
+  - Cennection Pooling
+  - Transaction Management
+
+- Solved Problem:
+  - [Health Clinic App](https://github.com/ayushiiagarwal/BridgeLabz-Training/tree/dbms-practice/dbms-practice/gcr-codebase/health-clinic-app?authuser=0)
+
+- Solved scenario-based problems:
+  - Online Auction Bidding System
+  - Smart Energy Consumption Monitor
+
+### 📅 Day 42 (9-Feb-26) - Scenario-based Questions
+- Solved Problem:
+  - Job Portal Resume Shortlisting System
+  - Event Feedback & Rating Analyzer
+
+### 📅 Day 43 (10-Feb-26) - M1 Mock Test (Pen & Paper)
+- Questions
+  - Smart Canteen Order Tracker
+  - Online Fitness App - Weekly Activity Analyzer
+  - Course Enrollment Analyzer
+
 
 ---
 Keep Learning!☕
