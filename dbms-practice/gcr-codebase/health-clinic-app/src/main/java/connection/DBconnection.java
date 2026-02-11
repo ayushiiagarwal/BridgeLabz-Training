@@ -1,30 +1,15 @@
 package connection;
 
-import java.sql.*;
-import java.util.Properties;
-import java.io.FileInputStream;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
 
 public class DBconnection {
+    private static final String url = "jdbc:mysql://localhost:3306/HealthClinicDB";
+    private static final String USER = "root";
+    private static final String PASSWORD = "Ayushi@200405";
 
-    private static Connection connection;
-
-    static {
-        try {
-            Properties props = new Properties();
-            props.load(new FileInputStream("db.properties"));
-
-            String url = props.getProperty("db.url");
-            String user = props.getProperty("db.username");
-            String password = props.getProperty("db.password");
-
-            connection = DriverManager.getConnection(url, user, password);
-
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-    public static Connection getConnection() {
-        return connection;
+    public static Connection getConnection() throws SQLException{
+        return DriverManager.getConnection(url, USER, PASSWORD);
     }
 }
