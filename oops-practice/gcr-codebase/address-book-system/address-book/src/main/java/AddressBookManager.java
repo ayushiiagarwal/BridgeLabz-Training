@@ -1,11 +1,13 @@
 import java.util.*;
 import java.io.*;
+import com.opencsv.*;
+import com.opencsv.exceptions.CsvValidationException;
 
 public class AddressBookManager implements AddressBookInterface {
 
     // UC-6 
     private Map<String, AddressBook> addressBooks = new HashMap<>(); 
-    private Scanner scanner = new Scanner(System.in);
+    private Scanner sc = new Scanner(System.in);
 
     public AddressBook getOrCreateAddressBook(String name) {
         return addressBooks.computeIfAbsent(name, AddressBook::new);
@@ -18,28 +20,28 @@ public class AddressBookManager implements AddressBookInterface {
         System.out.println("\nEnter Contact Details");
 
         System.out.print("First Name: ");
-        String firstName = scanner.nextLine();
+        String firstName = sc.nextLine();
 
         System.out.print("Last Name: ");
-        String lastName = scanner.nextLine();
+        String lastName = sc.nextLine();
 
         System.out.print("Address: ");
-        String address = scanner.nextLine();
+        String address = sc.nextLine();
 
         System.out.print("City: ");
-        String city = scanner.nextLine();
+        String city = sc.nextLine();
 
         System.out.print("State: ");
-        String state = scanner.nextLine();
+        String state = sc.nextLine();
 
         System.out.print("Zip: ");
-        String zip = scanner.nextLine();
+        String zip = sc.nextLine();
 
         System.out.print("Phone Number: ");
-        String phoneNumber = scanner.nextLine();
+        String phoneNumber = sc.nextLine();
 
         System.out.print("Email: ");
-        String email = scanner.nextLine();
+        String email = sc.nextLine();
 
         return new Contact(firstName, lastName, address, city, state, zip, phoneNumber, email);
     }
@@ -48,7 +50,7 @@ public class AddressBookManager implements AddressBookInterface {
     @Override
     public void addContact(Contact contact) {
         System.out.println("Enter Address Book Name: ");
-        String bookname = scanner.nextLine();
+        String bookname = sc.nextLine();
         AddressBook book = getOrCreateAddressBook(bookname);
         boolean done = book.addContact(contact);
         
@@ -62,14 +64,14 @@ public class AddressBookManager implements AddressBookInterface {
         while(true){
 
             System.out.println("Enter Address Book Name: ");
-            String bookname = scanner.nextLine();
+            String bookname = sc.nextLine();
             AddressBook book = getOrCreateAddressBook(bookname);
 
             Contact contact = createContact();
             book.addContact(contact);
 
             System.out.println("Add new contact? (Yes/No): ");
-            String ans = scanner.nextLine();
+            String ans = sc.nextLine();
 
             if(!ans.equalsIgnoreCase("Yes")){
                 break;
@@ -83,7 +85,7 @@ public class AddressBookManager implements AddressBookInterface {
     @Override
     public void editContact() {
         System.out.println("Enter Address Book Name: ");
-        String bookname = scanner.nextLine();
+        String bookname = sc.nextLine();
         AddressBook book = addressBooks.get(bookname);
 
         if (book == null) {
@@ -92,10 +94,10 @@ public class AddressBookManager implements AddressBookInterface {
         }
 
         System.out.print("Enter First Name to edit: ");
-        String firstName = scanner.nextLine();
+        String firstName = sc.nextLine();
 
         System.out.print("Enter Last Name to edit: ");
-        String lastName = scanner.nextLine();
+        String lastName = sc.nextLine();
 
         Contact contact = book.findContactByName(firstName, lastName);
 
@@ -107,22 +109,22 @@ public class AddressBookManager implements AddressBookInterface {
         System.out.println("\nEnter new details");
 
         System.out.print("New Address: ");
-        contact.setAddress(scanner.nextLine());
+        contact.setAddress(sc.nextLine());
 
         System.out.print("New City: ");
-        contact.setCity(scanner.nextLine());
+        contact.setCity(sc.nextLine());
 
         System.out.print("New State: ");
-        contact.setState(scanner.nextLine());
+        contact.setState(sc.nextLine());
 
         System.out.print("New Zip: ");
-        contact.setZip(scanner.nextLine());
+        contact.setZip(sc.nextLine());
 
         System.out.print("New Phone Number: ");
-        contact.setPhoneNumber(scanner.nextLine());
+        contact.setPhoneNumber(sc.nextLine());
 
         System.out.print("New Email: ");
-        contact.setEmail(scanner.nextLine());
+        contact.setEmail(sc.nextLine());
 
         System.out.println("Contact updated successfully!");
     }
@@ -131,7 +133,7 @@ public class AddressBookManager implements AddressBookInterface {
     @Override
     public void deleteContacts(){
         System.out.println("Enter Address Book Name: ");
-        String bookname = scanner.nextLine();
+        String bookname = sc.nextLine();
         AddressBook book = addressBooks.get(bookname);
 
         if(book == null){
@@ -140,10 +142,10 @@ public class AddressBookManager implements AddressBookInterface {
         }
 
         System.out.print("Enter First Name to delete: ");
-        String firstName = scanner.nextLine();
+        String firstName = sc.nextLine();
 
         System.out.print("Enter Last Name to delete: ");
-        String lastName = scanner.nextLine();
+        String lastName = sc.nextLine();
 
         book.removeContact(firstName, lastName);
     }
@@ -152,9 +154,9 @@ public class AddressBookManager implements AddressBookInterface {
     @Override
     public void searchPersonByCityOrState(){
         System.out.println("Enter the criteria for your search(city/state): ");
-        String choice = scanner.nextLine();
+        String choice = sc.nextLine();
         System.out.println("Enter " + choice + " name: ");
-        String name = scanner.nextLine();
+        String name = sc.nextLine();
 
         List<Contact> result = new ArrayList<>();
 
@@ -194,7 +196,7 @@ public class AddressBookManager implements AddressBookInterface {
         }
 
         System.out.println("View Person by(city/state): ");
-        String choice = scanner.nextLine();
+        String choice = sc.nextLine();
 
         if(choice.equalsIgnoreCase("city")){
             displayMap(city, "city");
@@ -238,7 +240,7 @@ public class AddressBookManager implements AddressBookInterface {
         }
 
         System.out.println("Count Person by (city/state): ");
-        String choice = scanner.nextLine();
+        String choice = sc.nextLine();
 
         if(choice.equalsIgnoreCase("city")){
             displayCount(cityCount, "city");
@@ -268,7 +270,7 @@ public class AddressBookManager implements AddressBookInterface {
     @Override
     public void sortContacts(){
         System.out.println("Enter Address Book Name: ");
-        String bookname = scanner.nextLine();
+        String bookname = sc.nextLine();
 
         AddressBook book = addressBooks.get(bookname);
 
@@ -290,7 +292,7 @@ public class AddressBookManager implements AddressBookInterface {
     public void sortContactsByCityStateOrZip() {
 
         System.out.print("Enter Address Book Name: ");
-        String bookName = scanner.nextLine();
+        String bookName = sc.nextLine();
 
         AddressBook book = addressBooks.get(bookName);
         if (book == null) {
@@ -299,7 +301,7 @@ public class AddressBookManager implements AddressBookInterface {
         }
 
         System.out.print("Sort by (city/state/zip): ");
-        String choice = scanner.nextLine();
+        String choice = sc.nextLine();
 
         
         switch (choice.toLowerCase()) {
@@ -325,7 +327,7 @@ public class AddressBookManager implements AddressBookInterface {
 
     // UC-13
     public void writeAddressBookToFile(){
-        String bookname = scanner.nextLine();
+        String bookname = sc.nextLine();
         AddressBook book = addressBooks.get(bookname);
         if(book == null){
             System.out.println("Address Book not found.");
@@ -355,7 +357,7 @@ public class AddressBookManager implements AddressBookInterface {
     }
 
     public void readAddressBookFromFile(){
-        String bookname = scanner.nextLine();
+        String bookname = sc.nextLine();
         AddressBook book = addressBooks.get(bookname);
 
         String file = bookname + ".txt";
@@ -378,6 +380,55 @@ public class AddressBookManager implements AddressBookInterface {
         }
         catch(IOException e){
             System.out.println("file not found!");
+        }
+    }
+
+    // UC - 14
+    public void readAddressBookFromCSV(){
+        String bookName = sc.nextLine();
+        AddressBook book = addressBooks.get(bookName);
+
+        try(CSVReader reader = new CSVReader(new FileReader(bookName + ".csv"))){
+            String[] data;
+            while((data = reader.readNext()) != null){
+                Contact contact = new Contact(
+                    data[0], data[1], data[2], data[3], data[4], data[5], data[6], data[7]);
+                
+                book.addContact(contact);
+            }
+
+            System.out.println("Operation Successfull.");
+        }
+        catch(IOException | CsvValidationException e){
+            System.out.println("File Not Found!");
+        }
+    }
+
+    public void writeAddressBookToCSV(){
+        String bookname = sc.nextLine();
+        AddressBook book = addressBooks.get(bookname);
+        if(book == null){
+            System.out.println("Address Book not found.");
+            return;
+        }
+
+        try(BufferedWriter  writer = new BufferedWriter(new FileWriter(bookname + ".csv"))){
+            for(Contact c : book.getContacts()){
+                writer.write(
+                    c.getFirstName() + "," +
+                    c.getLastName() + "," + 
+                    c.getAddress() + "," + 
+                    c.getCity() + "," +
+                    c.getState() + "," + 
+                    c.getZip() + "," +
+                    c.getPhoneNumber() + "," +
+                    c.getEmail() + "\n"
+                );
+            }
+            System.out.println("Address book saved!");
+        }
+        catch(IOException e){
+            System.out.println("Error writing to file.");
         }
     }
 }

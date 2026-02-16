@@ -23,5 +23,9 @@ public interface AddressBookInterface {
     void writeAddressBookToFile();
 
     void readAddressBookFromFile();
+
+    void readAddressBookFromCSV();
+
+    void writeAddressBookToCSV();
     
 }

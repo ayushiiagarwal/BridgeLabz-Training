@@ -79,6 +79,14 @@ public class Main{
                     break;
 
                 case 13:
+                    manager.readAddressBookFromCSV();
+                    break;
+                
+                case 14:
+                    manager.writeAddressBookToCSV();
+                    break;
+
+                case 0:
                     b = false;
                     break;
 
@@ -103,6 +111,8 @@ public class Main{
         System.out.println("10. Sort Contacts by city/state/zip.");
         System.out.println("11. Write addressbook to file.");
         System.out.println("12. Read addressbook from file.");
-        System.out.println("13. Exit.");
+        System.out.println("13. Write addressbook to CSV.");
+        System.out.println("14. Read addressbook from CSV.");
+        System.out.println("0. Exit.");
     }
 }
