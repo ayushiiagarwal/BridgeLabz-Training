@@ -1,62 +1,102 @@
-public class EmployeeWageComputationProblem{
-    public static final int partTime = 1;
-    public static final int fullTime = 2;
-    public static final int wagePerHour = 20;    
-    public static final int workingDays = 20; 
-    public static final int maxHours = 100;   
+import java.util.*;
 
-    public static int useCase1() {
-        return (int) Math.floor(Math.random() * 10) % 3;
+interface IEmpWageBuilder {
+    void addCompany(String companyName, int wagePerHour, int workingDays, int maxHours);
+    void computeWage();
+    int getTotalWage(String companyName);
+}
+
+class CompanyEmpWage {
+    String companyName;
+    int wagePerHour;
+    int workingDays;
+    int maxHours;
+    int totalWage;
+    ArrayList<Integer> dailyWages;    
+
+    public CompanyEmpWage(String companyName, int wagePerHour, int workingDays, int maxHours) {
+        this.companyName = companyName;
+        this.wagePerHour = wagePerHour;
+        this.workingDays = workingDays;
+        this.maxHours = maxHours;
+        this.totalWage = 0;
+        this.dailyWages = new ArrayList<>();
     }
 
-    public static int useCase4(int empCheck) {
-        int empHrs = 0;
-        switch (empCheck) {
-            case partTime:
-                empHrs = 8; 
-                break;
-            case fullTime:
-                empHrs = 8; 
-                break;
-            default:
-                empHrs = 0;
-        }
-        return empHrs;
+    public void setTotalWage(int totalWage){ this.totalWage = totalWage; }
+
+    public int getTotalWage(){ return this.totalWage; }
+}
+
+class EmpWageBuilder implements IEmpWageBuilder {
+
+    ArrayList<CompanyEmpWage> companyList;
+
+    public EmpWageBuilder(){
+        companyList = new ArrayList<>();
     }
 
-    public static int useCase2(int empHrs) {
-        return empHrs * wagePerHour;
+    public void addCompany(String companyName, int wagePerHour, int workingDays, int maxHours) {
+        CompanyEmpWage company = new CompanyEmpWage(companyName, wagePerHour, workingDays, maxHours);
+        companyList.add(company);
     }
 
-    public static void computeMonthlyWage() {
-        int totalEmpHrs = 0;
-        int totalWorkingDays = 0;
+    public void computeWage(){
+        for (CompanyEmpWage company : companyList){
+            int totalHours = 0;
+            int totalDays = 0;
 
-        while (totalEmpHrs < maxHours && totalWorkingDays < workingDays) {
-            totalWorkingDays++;
-            
-            int empCheck = useCase1(); 
-            int empHrs = useCase4(empCheck); 
-            
-            if (totalEmpHrs + empHrs > maxHours) {
-                empHrs = maxHours - totalEmpHrs;
+            while(totalHours < company.maxHours && totalDays < company.workingDays) {
+                totalDays++;
+                int empHours = 0;
+                int attendance = (int) (Math.random() * 3);
+
+                switch (attendance) {
+                    case 1:
+                        empHours = 8;  // Full time
+                        break;
+                    case 2:
+                        empHours = 4;  // Part time
+                        break;
+                    default:
+                        empHours = 0;  // Absent
+                }
+
+                totalHours += empHours;
+
+                int dailyWage = empHours * company.wagePerHour;
+                company.dailyWages.add(dailyWage);   
+
+                company.totalWage += dailyWage;
             }
-            
-            totalEmpHrs += empHrs;
-            int dailyWage = useCase2(empHrs);
-            System.out.println("Day " + totalWorkingDays + ", Hours: " + empHrs + ", Wage: " + dailyWage);
-        }
 
-        int totalEmpWage = totalEmpHrs * wagePerHour;
-    
-        System.out.println("Total Working Days: " + totalWorkingDays);
-        System.out.println("Total Working Hours: " + totalEmpHrs);
-        System.out.println("Total Monthly Employee Wage: " + totalEmpWage);
+            company.setTotalWage(company.totalWage);
+            System.out.println("Total Wage for " + company.companyName + " = " + company.totalWage);
+        }
     }
+
+    public int getTotalWage(String companyName) {
+        for(CompanyEmpWage company : companyList){
+            if(company.companyName.equals(companyName))
+                return company.getTotalWage();
+        }
+        return 0;
+    }
+}
+
+public class EmployeeWageComputationProblem {
 
     public static void main(String[] args) {
-        System.out.println("Welcome to Employee Wage Computation Program");
 
-        computeMonthlyWage();
+        System.out.println("Welcome to Employee Wage Computation Program!");
+
+        EmpWageBuilder builder = new EmpWageBuilder();
+
+        builder.addCompany("Microsoft", 20, 20, 100);
+        builder.addCompany("Google", 25, 22, 120);
+
+        builder.computeWage();
+
+        System.out.println("Queried Wage for Microsoft = " + builder.getTotalWage("Microsoft"));
     }
 }
