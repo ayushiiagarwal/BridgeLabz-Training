@@ -95,5 +95,6 @@ public class SupermarketStore {
         }
 
         System.out.printf("\nTotal value of the inventory: %.2f\n", total);
+        sc.close();
     }
 }
