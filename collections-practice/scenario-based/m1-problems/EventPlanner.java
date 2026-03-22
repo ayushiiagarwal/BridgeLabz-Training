@@ -10,7 +10,7 @@ abstract class Festival{
         this.date = date;
     }
 
-    abstract void didplay();
+    abstract void display();
 }
 
 class MusicFestival extends Festival{
@@ -24,7 +24,7 @@ class MusicFestival extends Festival{
         this.ticketPrice = ticketPrice;
     }
 
-    void didplay(){
+    void display(){
         System.out.println("Festival Name: " + name + 
             "\nLocation: " + location + 
             "\nDate: " + date + 
@@ -45,7 +45,7 @@ class FoodFestival extends Festival{
         this.entryFee = entryFee;
     }
 
-    void didplay(){
+    void display(){
         System.out.println("Festival Name: " + name + 
             "\nLocation: " + location + 
             "\nDate: " + date + 
@@ -66,7 +66,7 @@ class ArtFestival extends Festival{
         this.exhibitionFee = exhibitionFee;
     }
 
-    void didplay(){
+    void display(){
         System.out.println("Festival Name: " + name + 
             "\nLocation: " + location + 
             "\nDate: " + date + 
@@ -104,7 +104,7 @@ public class EventPlanner {
                 String name = data[1];
 
                 if(map.containsKey(name))
-                    map.get(name).didplay();
+                    map.get(name).display();
             }
         }
 
