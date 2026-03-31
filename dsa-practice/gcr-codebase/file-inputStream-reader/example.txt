@@ -1,0 +1,5 @@
+Example file to read a file line by line using FileReader
+
+Name - Ayushi Agarwal
+Name - Alankrati Saxena
+Name - Shruti Sharma
