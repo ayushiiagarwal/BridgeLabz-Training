@@ -1,0 +1,52 @@
+Practice Problems on CSV Data Handling
+Basic Problems
+1️⃣ Read a CSV File and Print Data
+Read a CSV file containing student details (ID, Name, Age, Marks).
+Print each record in a structured format.
+2️⃣ Write Data to a CSV File
+Create a CSV file with employee details (ID, Name, Department, Salary).
+Write at least 5 records to the file.
+3️⃣ Read and Count Rows in a CSV File
+Read a CSV file and count the number of records (excluding the header row).
+Intermediate Problems
+4️⃣ Filter Records from CSV
+Read a CSV file and filter students who have scored more than 80 marks.
+Print only the qualifying records.
+5️⃣ Search for a Record in CSV
+Read an employees.csv file and search for an employee by name.
+Print their department and salary.
+6️⃣ Modify a CSV File (Update a Value)
+Read a CSV file and increase the salary of employees from the "IT" department by 10%.
+Save the updated records back to a new CSV file.
+7️⃣ Sort CSV Records by a Column
+Read a CSV file and sort the records by Salary in descending order.
+Print the top 5 highest-paid employees.
+Advanced Problems
+8️⃣ Validate CSV Data Before Processing
+Ensure that the "Email" column follows a valid email format using regex.
+Ensure that "Phone Numbers" contain exactly 10 digits.
+Print any invalid rows with an error message.
+9️⃣ Convert CSV Data into Java Objects
+Read a CSV file and convert each row into a Student Java object.
+Store the objects in a List<Student> and print them.
+🔟 Merge Two CSV Files
+You have two CSV files:
+students1.csv (contains ID, Name, Age)
+students2.csv (contains ID, Marks, Grade)
+Merge both files based on ID and create a new file containing all details.
+1️⃣1️⃣ Read Large CSV File Efficiently
+Given a large CSV file (500MB+), implement a memory-efficient way to read it in chunks.
+Process only 100 lines at a time and display the count of records processed.
+1️⃣2️⃣ Detect Duplicates in a CSV File
+Read a CSV file and detect duplicate entries based on the ID column.
+Print all duplicate records.
+1️⃣3️⃣ Generate a CSV Report from Database
+Fetch employee records from a database and write them into a CSV file.
+Include headers: Employee ID, Name, Department, Salary.
+1️⃣4️⃣ Convert JSON to CSV and Vice Versa
+Read a JSON file containing a list of students.
+Convert it into CSV format and save it.
+Implement another method to read CSV and convert it back to JSON.
+1️⃣5️⃣ Encrypt and Decrypt CSV Data
+Encrypt the sensitive fields (e.g., Salary, Email) while writing to a CSV file.
+Decrypt them when reading the file.

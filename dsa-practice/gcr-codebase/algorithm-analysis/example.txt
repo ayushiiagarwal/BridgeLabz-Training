@@ -1,0 +1,6 @@
+Problem Statement: Large File Reading Efficiency
+Objective:
+Compare FileReader (Character Stream) and InputStreamReader (Byte Stream) when reading a large file (500MB).
+Approach:
+FileReader: Reads character by character (slower for binary files).
+InputStreamReader: Reads bytes and converts to characters (more efficient).
